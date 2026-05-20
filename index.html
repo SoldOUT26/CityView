@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ИИ-ВИЗАЦИЯ · Коммерческое предложение для CityView</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* двухцветная палитра — зелёный + фиолетовый акценты */
+  --bg: #08080f;
+  --bg2: #10101a;
+  --bg3: #16161f;
+  --bg4: #1c1c2e;
+  --green: #00c896;
+  --green-bright: #00e6ad;
+  --green-dim: rgba(0,200,150,0.07);
+  --green-glow: rgba(0,200,150,0.12);
+  --purple: #00c896;
+  --purple-dim: rgba(0,200,150,0.07);
+  --purple-glow: rgba(0,200,150,0.12);
+  --white: #ffffff;
+  --gray: #8a8aaa;
+  --gray2: #555570;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.04);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+.container { max-width: 980px; margin: 0 auto; padding: 0 28px; }
+
+/* ============ HERO ============ */
+.hero {
+  padding: 100px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -350px; left: 50%; transform: translateX(-50%);
+  width: 1100px; height: 1100px;
+  background:
+    radial-gradient(circle at 35% 50%, rgba(0,200,150,0.10) 0%, transparent 50%),
+    radial-gradient(circle at 65% 50%, rgba(0,200,150,0.07) 0%, transparent 50%);
+  pointer-events: none;
+  animation: heroGlow 18s ease-in-out infinite;
+}
+@keyframes heroGlow {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }
+  50% { transform: translateX(-50%) scale(1.1); opacity: 0.75; }
+}
+
+.hero-badge-row {
+  display: flex; justify-content: center; gap: 8px;
+  flex-wrap: wrap; margin-bottom: 36px;
+  position: relative; z-index: 1;
+  animation: fadeInUp 0.7s ease both;
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 18px;
+  border: 1px solid rgba(0,200,150,0.35);
+  border-radius: 100px;
+  font-size: 12px;
+  color: var(--green);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+  background: rgba(0,200,150,0.05);
+  backdrop-filter: blur(6px);
+}
+.badge.purple {
+  border-color: rgba(0,200,150,0.35);
+  color: var(--purple);
+  background: rgba(0,200,150,0.05);
+}
+
+.hero-eyebrow {
+  font-size: 12px;
+  color: var(--gray);
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 24px;
+  position: relative; z-index: 1;
+  animation: fadeInUp 0.7s 0.1s ease both;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.025em;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; z-index: 1;
+  animation: fadeInUp 0.7s 0.2s ease both;
+}
+.hero h1 .green { color: var(--green); }
+.hero h1 .purple { color: var(--purple); }
+
+.hero .subtitle {
+  font-size: 17px;
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto 56px;
+  line-height: 1.65;
+  position: relative; z-index: 1;
+  animation: fadeInUp 0.7s 0.3s ease both;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: linear-gradient(180deg, var(--bg2), var(--bg3));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative; z-index: 1;
+  animation: fadeInUp 0.7s 0.4s ease both;
+  box-shadow: 0 24px 60px -20px rgba(0,200,150,0.15);
+}
+@media (max-width: 720px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .metrics { grid-template-columns: 1fr 1fr; } }
+
+.metric {
+  padding: 28px 18px;
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+.metric:last-child { border-right: none; }
+@media (max-width: 720px) {
+  .metric { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .metric:nth-child(even) { border-right: none; }
+}
+.metric .val {
+  font-size: clamp(32px, 4.2vw, 44px);
+  font-weight: 800;
+  color: var(--green);
+  font-family: 'JetBrains Mono', monospace;
+  display: block;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.metric .val.purple { color: var(--purple); }
+.metric .label {
+  font-size: 10.5px;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ============ DIVIDER ============ */
+hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+/* ============ SECTIONS ============ */
+.section { padding: 84px 0; }
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 14px;
+}
+.section-label.purple { color: var(--purple); }
+.section-title {
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-weight: 800;
+  margin-bottom: 14px;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+.section-title .green { color: var(--green); }
+.section-title .purple { color: var(--purple); }
+.section-sub {
+  font-size: 16px;
+  color: var(--gray);
+  max-width: 700px;
+  margin-bottom: 48px;
+  line-height: 1.65;
+}
+
+/* ============ POINTS OF GROWTH ============ */
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+@media (max-width: 720px) { .pain-grid { grid-template-columns: 1fr; } }
+
+.pain-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.pain-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 3px;
+  background: var(--green);
+  transition: all 0.3s;
+}
+.pain-card:nth-child(2)::before,
+.pain-card:nth-child(4)::before,
+.pain-card:nth-child(6)::before { background: var(--purple); }
+
+.pain-card:hover {
+  background: var(--bg3);
+  border-color: rgba(0,200,150,0.18);
+  transform: translateY(-2px);
+}
+.pain-card:nth-child(2):hover,
+.pain-card:nth-child(4):hover,
+.pain-card:nth-child(6):hover { border-color: rgba(0,200,150,0.18); }
+
+.pain-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+  display: block;
+}
+.pain-card:nth-child(2) .pain-tag,
+.pain-card:nth-child(4) .pain-tag,
+.pain-card:nth-child(6) .pain-tag { color: var(--purple); }
+
+.pain-quote {
+  font-size: 15px;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 14px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.pain-source {
+  font-size: 11.5px;
+  color: var(--gray2);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+/* ============ COMPANY MAP ============ */
+.company-map {
+  background: linear-gradient(135deg, rgba(0,200,150,0.04), rgba(0,200,150,0.03));
+  border: 1px solid rgba(0,200,150,0.15);
+  border-radius: 24px;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+}
+.company-map::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(0,200,150,0.08), transparent 70%);
+  pointer-events: none;
+}
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  position: relative; z-index: 1;
+}
+@media (max-width: 720px) { .map-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+.map-section h4 {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.map-section:nth-child(2) h4,
+.map-section:nth-child(4) h4 { color: var(--purple); }
+
+.map-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.map-list li {
+  font-size: 14px;
+  color: rgba(255,255,255,0.82);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+.map-list li::before {
+  content: '▸';
+  position: absolute; left: 0;
+  color: var(--green);
+  font-size: 10px;
+  top: 5px;
+}
+.map-section:nth-child(2) .map-list li::before,
+.map-section:nth-child(4) .map-list li::before { color: var(--purple); }
+
+.map-list li strong { color: var(--white); font-weight: 600; }
+.map-list li .muted { color: var(--gray); font-size: 13px; }
+
+/* ============ PRINCIPLES ============ */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 720px) { .principles-grid { grid-template-columns: 1fr; } }
+
+.principle {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.principle::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; height: 3px; width: 60%;
+  background: linear-gradient(90deg, var(--green), transparent);
+}
+.principle:nth-child(2)::before { background: linear-gradient(90deg, var(--purple), transparent); }
+.principle:nth-child(3)::before { background: linear-gradient(90deg, var(--green), transparent); }
+
+.principle:hover { transform: translateY(-3px); border-color: rgba(0,200,150,0.18); }
+.principle:nth-child(2):hover { border-color: rgba(0,200,150,0.18); }
+
+.principle .pnum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--green);
+  margin-bottom: 16px;
+  line-height: 1;
+  opacity: 0.4;
+}
+.principle:nth-child(2) .pnum { color: var(--purple); }
+
+.principle h4 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+.principle p {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.65;
+}
+
+/* ============ STAGES ============ */
+.stage-block {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 32px 36px;
+  margin-bottom: 16px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.stage-block:hover { border-color: rgba(0,200,150,0.18); }
+.stage-block.stage-purple:hover { border-color: rgba(0,200,150,0.18); }
+
+.stage-top {
+  display: flex; align-items: flex-start; gap: 20px;
+  margin-bottom: 24px;
+}
+.stage-num {
+  width: 56px; height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--green), #007a5e);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; font-weight: 800; color: #000;
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: 0 8px 24px -8px rgba(0,200,150,0.4);
+}
+.stage-num.purple {
+  background: linear-gradient(135deg, var(--purple), #007a5e);
+  color: #fff;
+  box-shadow: 0 8px 24px -8px rgba(0,200,150,0.4);
+}
+
+.stage-header-text { flex: 1; }
+.stage-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+
+.mtag {
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  color: var(--gray);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.02em;
+}
+.mtag.green { background: var(--green-dim); border-color: rgba(0,200,150,0.25); color: var(--green); }
+.mtag.purple { background: var(--purple-dim); border-color: rgba(0,200,150,0.25); color: var(--purple); }
+
+.stage-title {
+  font-size: clamp(20px, 2.6vw, 26px);
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+.stage-desc {
+  font-size: 14.5px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.stage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 580px) { .stage-grid { grid-template-columns: 1fr; } }
+
+.si {
+  font-size: 14px;
+  color: rgba(255,255,255,0.78);
+  padding: 7px 0;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border2);
+  line-height: 1.5;
+}
+.si::before {
+  content: '→';
+  color: var(--green);
+  flex-shrink: 0;
+  font-size: 13px;
+  margin-top: 2px;
+  font-weight: 600;
+}
+.stage-purple .si::before { color: var(--purple); }
+
+.result-box {
+  background: rgba(0,200,150,0.06);
+  border: 1px solid rgba(0,200,150,0.18);
+  border-radius: 14px;
+  padding: 16px 22px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+}
+.result-box strong { color: var(--green); }
+
+.stage-purple .result-box {
+  background: rgba(0,200,150,0.06);
+  border-color: rgba(0,200,150,0.18);
+}
+.stage-purple .result-box strong { color: var(--purple); }
+
+.stage-hours {
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin-top: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--gray);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.stage-hours .hour-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.stage-hours .hour-chip .name { color: var(--white); font-weight: 500; }
+.stage-hours .hour-chip .h { color: var(--green); font-weight: 600; }
+.stage-purple .stage-hours .hour-chip .h { color: var(--purple); }
+
+.subhead {
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 28px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.subhead::before {
+  content: '';
+  width: 24px; height: 1px;
+  background: var(--green);
+  opacity: 0.6;
+}
+
+/* ============ OPENCLAW CALLOUT ============ */
+.openclaw-callout {
+  background:
+    linear-gradient(135deg, rgba(0,200,150,0.08), rgba(0,200,150,0.05)),
+    var(--bg3);
+  border: 1px solid rgba(0,200,150,0.25);
+  border-radius: 22px;
+  padding: 40px;
+  margin: 24px 0 28px;
+  position: relative;
+  overflow: hidden;
+}
+.openclaw-callout::before {
+  content: '';
+  position: absolute;
+  top: -150px; right: -150px;
+  width: 460px; height: 460px;
+  background: radial-gradient(circle, rgba(0,200,150,0.12), transparent 70%);
+  pointer-events: none;
+}
+.openclaw-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 18px;
+  position: relative; z-index: 1;
+}
+.openclaw-logo {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--green-bright), var(--purple));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+  box-shadow: 0 12px 32px -8px rgba(0,200,150,0.4);
+}
+.openclaw-callout h3 {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.openclaw-callout .oc-sub {
+  font-size: 15px;
+  color: var(--gray);
+  margin-bottom: 28px;
+  line-height: 1.65;
+  position: relative; z-index: 1;
+  max-width: 720px;
+}
+.openclaw-callout .oc-sub strong { color: var(--white); }
+.openclaw-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  position: relative; z-index: 1;
+}
+@media (max-width: 640px) { .openclaw-features { grid-template-columns: 1fr; } }
+.oc-feature {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+.oc-feature h5 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--green);
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex; align-items: center; gap: 8px;
+}
+.oc-feature p {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.55;
+}
+
+/* ============ AGENTS GRID ============ */
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 18px 0 20px;
+}
+@media (max-width: 720px) { .agents-grid { grid-template-columns: 1fr; } }
+
+.agent-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.agent-card:hover {
+  border-color: rgba(0,200,150,0.25);
+  transform: translateY(-3px);
+  background: var(--bg4);
+}
+.agent-icon {
+  font-size: 32px;
+  margin-bottom: 14px;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,200,150,0.25));
+}
+.agent-tag {
+  font-size: 10.5px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--purple);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+  display: block;
+}
+.agent-card h5 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.agent-card p {
+  font-size: 13.5px;
+  color: var(--gray);
+  line-height: 1.55;
+}
+
+/* ============ HOURS TABLE ============ */
+.hours-table-wrap {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-top: 36px;
+  overflow-x: auto;
+}
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.hours-table thead th {
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 14px 10px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 500;
+}
+.hours-table thead th:not(:first-child) { text-align: center; }
+.hours-table tbody td {
+  padding: 16px 10px;
+  border-bottom: 1px solid var(--border2);
+  color: rgba(255,255,255,0.82);
+}
+.hours-table tbody td:not(:first-child) {
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+}
+.hours-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+.hours-table tbody tr:last-child td { border-bottom: none; }
+.hours-table tbody td:first-child strong { color: var(--white); margin-right: 4px; font-family: 'JetBrains Mono', monospace; }
+
+.row-stage-0 td:first-child strong { color: var(--green) !important; }
+.row-stage-1 td:first-child strong { color: var(--purple) !important; }
+.row-stage-2 td:first-child strong { color: var(--green) !important; }
+.row-stage-3 td:first-child strong { color: var(--purple) !important; }
+.row-stage-4 td:first-child strong { color: var(--green) !important; }
+
+.hours-table tfoot td {
+  padding: 18px 10px;
+  font-weight: 700;
+  border-top: 2px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+}
+.hours-table tfoot td:first-child { font-family: 'Outfit', sans-serif; font-size: 14px; }
+.hours-table tfoot td:not(:first-child) { text-align: center; color: var(--green); }
+
+/* ============ TEAM ============ */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+@media (max-width: 720px) { .team-grid { grid-template-columns: 1fr; } }
+
+.team-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px 28px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.team-card:hover {
+  border-color: rgba(0,200,150,0.25);
+  transform: translateY(-3px);
+}
+.team-avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0,200,150,0.25), rgba(0,200,150,0.18));
+  border: 2px solid rgba(0,200,150,0.35);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--green);
+  margin-bottom: 18px;
+  box-shadow: 0 8px 24px -8px rgba(0,200,150,0.3);
+}
+.team-name {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.team-role {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+.team-bio {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.team-bio .hi { color: var(--green); font-weight: 600; }
+.team-hours {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,200,150,0.1);
+  border: 1px solid rgba(0,200,150,0.25);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--green);
+  font-weight: 500;
+}
+
+/* ============ TIMELINE ============ */
+.timeline {
+  position: relative;
+  padding-left: 36px;
+  margin-top: 32px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px; top: 6px; bottom: 6px;
+  width: 2px;
+  background: linear-gradient(to bottom,
+    var(--green) 0%,
+    var(--purple) 50%,
+    var(--green) 100%);
+  opacity: 0.5;
+}
+.tl-item {
+  position: relative;
+  padding-bottom: 30px;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot {
+  position: absolute;
+  left: -30px; top: 4px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 5px rgba(0,200,150,0.15);
+}
+.tl-item:nth-child(2) .tl-dot { background: var(--purple); box-shadow: 0 0 0 5px rgba(0,200,150,0.15); }
+.tl-item:nth-child(3) .tl-dot { background: var(--green); box-shadow: 0 0 0 5px rgba(0,200,150,0.15); }
+.tl-item:nth-child(4) .tl-dot { background: var(--purple); box-shadow: 0 0 0 5px rgba(0,200,150,0.15); }
+.tl-item:nth-child(5) .tl-dot { background: var(--green); box-shadow: 0 0 0 5px rgba(0,200,150,0.15); }
+
+.tl-week {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+}
+.tl-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.01em; }
+.tl-desc { font-size: 14px; color: var(--gray); line-height: 1.6; }
+
+/* ============ OUTCOMES ============ */
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 40px;
+}
+@media (max-width: 720px) { .outcomes-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .outcomes-grid { grid-template-columns: 1fr; } }
+
+.oc {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px 24px;
+  transition: all 0.3s;
+}
+.oc:hover {
+  border-color: rgba(0,200,150,0.25);
+  transform: translateY(-3px);
+  background: var(--bg3);
+}
+.oc .icon {
+  font-size: 28px;
+  margin-bottom: 16px;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,200,150,0.2));
+}
+.oc h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.oc p {
+  font-size: 13.5px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ============ FORMAT LIST ============ */
+.format-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 780px;
+  margin-top: 32px;
+}
+.fi {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+.fi:last-child { border-bottom: none; }
+.fi .ficon {
+  font-size: 22px;
+  width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  filter: drop-shadow(0 2px 8px rgba(0,200,150,0.2));
+}
+.fi .ftext { flex: 1; font-size: 14.5px; line-height: 1.55; }
+.fi strong { color: var(--white); display: block; margin-bottom: 4px; font-weight: 600; font-size: 15px; }
+.fi span { color: var(--gray); }
+
+/* ============ PRICING ============ */
+.pricing-wrap {
+  background:
+    linear-gradient(135deg, rgba(0,200,150,0.04), rgba(0,200,150,0.03)),
+    var(--bg2);
+  border: 1px solid rgba(0,200,150,0.22);
+  border-radius: 28px;
+  padding: 72px 48px 56px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.pricing-wrap::before {
+  content: '';
+  position: absolute;
+  top: -200px; left: 50%; transform: translateX(-50%);
+  width: 640px; height: 640px;
+  background: radial-gradient(circle, rgba(0,200,150,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.pricing-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; right: -100px;
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(0,200,150,0.07), transparent 70%);
+  pointer-events: none;
+}
+
+.price-label {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 22px;
+  position: relative; z-index: 1;
+}
+.price-main {
+  font-size: clamp(60px, 9.5vw, 108px);
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: -0.04em;
+  margin-bottom: 8px;
+  line-height: 1;
+  position: relative; z-index: 1;
+  background: linear-gradient(180deg, var(--white) 30%, var(--green) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.price-aed {
+  font-size: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--gray);
+  margin-bottom: 10px;
+  position: relative; z-index: 1;
+  letter-spacing: 0.02em;
+}
+.price-per {
+  font-size: 16px;
+  color: var(--gray);
+  margin-bottom: 36px;
+  position: relative; z-index: 1;
+}
+.price-breakdown {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 36px;
+  line-height: 1.9;
+  position: relative; z-index: 1;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--green);
+  color: #000;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 20px 64px;
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.005em;
+  transition: all 0.2s;
+  text-decoration: none;
+  position: relative; z-index: 1;
+  box-shadow: 0 8px 32px -8px rgba(0,200,150,0.4);
+  margin-bottom: 36px;
+}
+.cta-btn:hover {
+  background: var(--green-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px -8px rgba(0,200,150,0.5);
+}
+
+/* Payment formats */
+.payment-formats {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+  margin-top: 8px;
+}
+.payment-label {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.payment-options {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.pay-option {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--white);
+  font-family: 'JetBrains Mono', monospace;
+  text-align: left;
+  min-width: 220px;
+}
+.pay-option .pay-icon {
+  font-size: 20px;
+}
+.pay-option .pay-title { font-weight: 600; color: var(--white); display: block; }
+.pay-option .pay-sub { font-size: 11px; color: var(--gray); display: block; margin-top: 2px; font-weight: 400; }
+
+/* ============ FOOTER ============ */
+.footer {
+  text-align: center;
+  padding: 48px 24px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--gray2);
+  line-height: 1.7;
+}
+.footer a { color: var(--green); text-decoration: none; }
+.footer .footer-meta {
+  font-size: 11.5px;
+  margin-top: 8px;
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+/* ============ FADE ============ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.pain-card, .principle, .stage-block, .oc, .team-card, .agent-card, .tl-item {
+  animation: fadeInUp 0.5s ease both;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 640px) {
+  .hero { padding: 70px 0 50px; }
+  .section { padding: 64px 0; }
+  .stage-block { padding: 24px; }
+  .pricing-wrap { padding: 56px 24px 44px; }
+  .company-map { padding: 28px; }
+  .openclaw-callout { padding: 28px; }
+  .stage-num { width: 48px; height: 48px; font-size: 18px; border-radius: 14px; }
+  .hours-table-wrap { padding: 24px 20px; }
+  .pay-option { min-width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge-row">
+      <span class="badge">🤖 ИИ-ВИЗАЦИЯ</span>
+      <span class="badge purple">🏗 CityView Development · Dubai</span>
+    </div>
+
+    <div class="hero-eyebrow">Коммерческое предложение · Этап 1</div>
+
+    <h1>Коммерческое предложение<br>по внедрению <span class="green">искусственного интеллекта</span><br>в процессы компании <span class="purple">CityView</span></h1>
+
+    <p class="subtitle">
+      Хирургический подход к внедрению ИИ в процессы CityView. Аудит, ликбез руководства, единая база знаний и собственный ИИ-офис на OpenClaw. За 3 месяца — без вреда для текущих процессов.
+    </p>
+
+    <div class="metrics">
+      <div class="metric"><span class="val">3</span><span class="label">Месяца</span></div>
+      <div class="metric"><span class="val purple">5</span><span class="label">Этапов</span></div>
+      <div class="metric"><span class="val">250</span><span class="label">Часов</span></div>
+      <div class="metric"><span class="val purple">3</span><span class="label">Агента</span></div>
+      <div class="metric"><span class="val">1</span><span class="label">ИИ-офис</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ POINTS OF GROWTH ============================ -->
+<section class="section" id="growth">
+  <div class="container">
+    <div class="section-label">Точки роста</div>
+    <h2 class="section-title">Какие процессы CityView<br>мы можем <span class="green">усилить</span> искусственным интеллектом</h2>
+    <p class="section-sub">Зафиксировали ключевые сигналы со звонка. От этого мы и строим дорожную карту.</p>
+
+    <div class="pain-grid">
+      <div class="pain-card">
+        <span class="pain-tag">▸ Стратегия</span>
+        <p class="pain-quote">«Всё происходит спонтанно. Нет системного и стратегического подхода. Куда мы дойдём — не видим».</p>
+        <p class="pain-source">Эльнур · CEO</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ Команда</span>
+        <p class="pain-quote">«Купили корпоративный Claude. Индусская команда даже кнопку „активировать" не нажала».</p>
+        <p class="pain-source">Эльнур · CEO</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ Клиенты</span>
+        <p class="pain-quote">«Уровень construction, какие трубы, какая плитка — отвечаем вручную по email и WhatsApp. А клиенты ждут современный формат».</p>
+        <p class="pain-source">Эльнур · CEO</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ Sales / BD</span>
+        <p class="pain-quote">«Ищу wealth funds, family offices в LinkedIn. Сидеть в Make/Render по 4 часа — убивает время и нервы».</p>
+        <p class="pain-source">Эльнур · CEO</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ Операционка</span>
+        <p class="pain-quote">«Подписание договора с брокером — 2 недели. По шагам всё ясно, можно сократить до 1 дня, но цена ошибки высокая».</p>
+        <p class="pain-source">Искандер · Sales / Marketing</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ Готовность</span>
+        <p class="pain-quote">«Мы там, где можно сделать — не наврядив каким-то процессам. Хирургически, не шашками».</p>
+        <p class="pain-source">Искандер · Sales / Marketing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ COMPANY MAP ============================ -->
+<section class="section" id="company">
+  <div class="container">
+    <div class="section-label">Контекст</div>
+    <h2 class="section-title">Карта компании <span class="green">CityView</span></h2>
+    <p class="section-sub">Наше понимание структуры, ИТ-стека и команды — от этого строим внедрение.</p>
+
+    <div class="company-map">
+      <div class="map-grid">
+        <div class="map-section">
+          <h4>Структура отделов</h4>
+          <ul class="map-list">
+            <li><strong>Sales / Marketing</strong> <span class="muted">— объединены под Искандером</span></li>
+            <li><strong>Operations</strong> <span class="muted">— GR, Customer Service, Collection, SPA</span></li>
+            <li><strong>Finance</strong> <span class="muted">— CFO русскоговорящий</span></li>
+            <li><strong>Construction</strong> <span class="muted">— отдельное юрлицо, общие сотрудники</span></li>
+            <li><strong>Brokers</strong> <span class="muted">— внешняя продажа недвижимости</span></li>
+          </ul>
+        </div>
+        <div class="map-section">
+          <h4>Языковая дистрибуция</h4>
+          <ul class="map-list">
+            <li><strong>5–6 человек</strong> <span class="muted">— русскоговорящие руководители</span></li>
+            <li><strong>1 человек</strong> <span class="muted">— русскоговорящий линейный персонал</span></li>
+            <li><strong>Остальная команда</strong> <span class="muted">— индусская и местная, нерусскоговорящая</span></li>
+            <li><strong>Все в одном офисе</strong> <span class="muted">— Дубай, удобно для визитов</span></li>
+          </ul>
+        </div>
+        <div class="map-section">
+          <h4>ИТ-стек</h4>
+          <ul class="map-list">
+            <li><strong>Битрикс24</strong> <span class="muted">— кастомизированный, доработка идёт</span></li>
+            <li><strong>SharePoint</strong> <span class="muted">— файловое хранилище</span></li>
+            <li><strong>Microsoft 365</strong> <span class="muted">— корпоративная почта</span></li>
+            <li><strong>Google Workspace</strong> <span class="muted">— Calendar, Drive</span></li>
+            <li><strong>WhatsApp + email</strong> <span class="muted">— внутренние коммуникации</span></li>
+          </ul>
+        </div>
+        <div class="map-section">
+          <h4>Что уже используется в ИИ</h4>
+          <ul class="map-list">
+            <li><strong>Claude Pro (corp)</strong> <span class="muted">— куплен, использует меньшинство</span></li>
+            <li><strong>Obsidian</strong> <span class="muted">— у Эльнура как «второй мозг»</span></li>
+            <li><strong>ChatGPT</strong> <span class="muted">— команда использует как Google</span></li>
+            <li><strong>Manus, Perplexity</strong> <span class="muted">— разовые эксперименты</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ PRINCIPLES ============================ -->
+<section class="section" id="principles">
+  <div class="container">
+    <div class="section-label purple">Принципы внедрения</div>
+    <h2 class="section-title">Как мы будем работать <span class="purple">с вами</span></h2>
+    <p class="section-sub">Три принципа, согласованных на установочном звонке.</p>
+
+    <div class="principles-grid">
+      <div class="principle">
+        <div class="pnum">01</div>
+        <h4>Хирургически, не шашками</h4>
+        <p>Не сносим работающие процессы. Внедряем туда, где даёт результат и не создаёт риска. Цена ошибки в девелопменте высокая — действуем точечно.</p>
+      </div>
+      <div class="principle">
+        <div class="pnum">02</div>
+        <h4>Параллельные потоки</h4>
+        <p>Аудит структуры и быстрые локальные победы — одновременно. Не ждём окончания одного, чтобы начать другое. Так результат быстрее.</p>
+      </div>
+      <div class="principle">
+        <div class="pnum">03</div>
+        <h4>От руководства к команде</h4>
+        <p>Сначала ликбез для 5 русскоговорящих руководителей. Они становятся локомотивом. Затем — внедрение на уровне всей компании.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ ROADMAP ============================ -->
+<section class="section" id="roadmap">
+  <div class="container">
+    <div class="section-label">Дорожная карта</div>
+    <h2 class="section-title">5 этапов · 3 месяца · <span class="green">250 часов</span> работы</h2>
+    <p class="section-sub">Этот оффер охватывает все 5 этапов. Каждый даёт измеримый результат и открывает следующий.</p>
+
+    <!-- STAGE 0 -->
+    <div class="stage-block">
+      <div class="stage-top">
+        <div class="stage-num">0</div>
+        <div class="stage-header-text">
+          <div class="stage-meta">
+            <span class="mtag">⏱ 43 часа</span>
+            <span class="mtag">📅 Недели 1–2</span>
+            <span class="mtag green">Выездная стратсессия</span>
+          </div>
+          <div class="stage-title">Установочная сессия и аудит компании</div>
+          <p class="stage-desc">Погружение в процессы, оцифровка структуры, аудит ИТ-стека. Финал — отчёт с приоритетами и согласованной картой следующих этапов.</p>
+        </div>
+      </div>
+
+      <div class="stage-grid">
+        <div class="si">Выездная стратсессия в Дубай — личное участие и присутствие наших экспертов в офисе CityView в отдельных случаях</div>
+        <div class="si">Интервью с 5 русскоговорящими руководителями отделов</div>
+        <div class="si">Анкетирование команды — фиксация уровня владения ИИ</div>
+        <div class="si">Аудит Битрикс24, SharePoint, текущих процессов</div>
+        <div class="si">Карта процессов компании с точками внедрения</div>
+        <div class="si">Сводный отчёт + презентация результатов аудита</div>
+      </div>
+
+      <div class="result-box"><strong>✓ Результат:</strong> Зафиксированная карта компании, приоритезированный список процессов под ИИ, согласованный детальный план следующих этапов.</div>
+
+      <div class="stage-hours">
+        <span class="hour-chip"><span class="name">Стас</span> <span class="h">10 ч</span></span>
+        <span class="hour-chip"><span class="name">Роман</span> <span class="h">17 ч</span></span>
+        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">16 ч</span></span>
+      </div>
+    </div>
+
+    <!-- STAGE 1 -->
+    <div class="stage-block stage-purple">
+      <div class="stage-top">
+        <div class="stage-num purple">1</div>
+        <div class="stage-header-text">
+          <div class="stage-meta">
+            <span class="mtag">⏱ 46 часов</span>
+            <span class="mtag">📅 Недели 3–6</span>
+            <span class="mtag purple">5 групповых + 2 индивидуальных</span>
+          </div>
+          <div class="stage-title">Ликбез для руководящего состава</div>
+          <p class="stage-desc">5 русскоговорящих руководителей выходят на профессиональный уровень работы с ИИ. Не «как Google» — а инструмент стратегического уровня.</p>
+        </div>
+      </div>
+
+      <div class="stage-grid">
+        <div class="si">Сессия 1: Карта ИИ-инструментов + настройка Claude Projects</div>
+        <div class="si">Сессия 2: Промпт-инжиниринг под их конкретные роли</div>
+        <div class="si">Сессия 3: Deep Research для рынка недвижимости и инвесторов</div>
+        <div class="si">Сессия 4: Безопасность данных + внутренний регламент</div>
+        <div class="si">Сессия 5: Введение в концепцию ИИ-агентов (вход в этап 3)</div>
+        <div class="si">Индивидуальная: Эльнур — поиск инвесторов, стратегический research</div>
+        <div class="si">Индивидуальная: Искандер — контент-стратегия, агенты в маркетинге</div>
+        <div class="si">Чат-поддержка + библиотека из 15+ промптов под их задачи</div>
+      </div>
+
+      <div class="result-box"><strong>✓ Результат:</strong> 5 руководителей работают с ИИ профессионально. Каждый с персональным набором инструментов. Готовая библиотека промптов и регламент безопасности.</div>
+
+      <div class="stage-hours">
+        <span class="hour-chip"><span class="name">Стас</span> <span class="h">32 ч</span></span>
+        <span class="hour-chip"><span class="name">Роман</span> <span class="h">5 ч</span></span>
+        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">9 ч</span></span>
+      </div>
+    </div>
+
+    <!-- STAGE 2 -->
+    <div class="stage-block">
+      <div class="stage-top">
+        <div class="stage-num">2</div>
+        <div class="stage-header-text">
+          <div class="stage-meta">
+            <span class="mtag">⏱ 55 часов</span>
+            <span class="mtag">📅 Недели 5–9</span>
+            <span class="mtag green">Параллельно с ликбезом</span>
+          </div>
+          <div class="stage-title">Единая база знаний CityView</div>
+          <p class="stage-desc">Решаем главный блокер: данные раскиданы по SharePoint, Битрикс24, Obsidian и личным сессиям Claude. Строим единое хранилище, которое потом «кормит» агентов.</p>
+        </div>
+      </div>
+
+      <div class="stage-grid">
+        <div class="si">Архитектура базы знаний — структура, метаданные, теги</div>
+        <div class="si">Развёртывание Obsidian как единого источника правды</div>
+        <div class="si">Импорт данных из SharePoint — с автоматизацией где возможно</div>
+        <div class="si">Структурирование процессов по каждому отделу с руководителями</div>
+        <div class="si">Наполнение контекстом проектов CityView — критично для агентов</div>
+        <div class="si">Регламент работы с базой + обучение наполнителей</div>
+      </div>
+
+      <div class="result-box"><strong>✓ Результат:</strong> У компании появляется «второй мозг» — единое место со всеми данными. К нему подключаются ИИ-агенты. Сотрудники знают, как наполнять и поддерживать.</div>
+
+      <div class="stage-hours">
+        <span class="hour-chip"><span class="name">Стас</span> <span class="h">11 ч</span></span>
+        <span class="hour-chip"><span class="name">Роман</span> <span class="h">8 ч</span></span>
+        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">36 ч</span></span>
+      </div>
+    </div>
+
+    <!-- STAGE 3 with OpenClaw callout -->
+    <div class="stage-block stage-purple">
+      <div class="stage-top">
+        <div class="stage-num purple">3</div>
+        <div class="stage-header-text">
+          <div class="stage-meta">
+            <span class="mtag">⏱ 87 часов</span>
+            <span class="mtag">📅 Недели 7–11</span>
+            <span class="mtag purple">Физическое развёртывание</span>
+          </div>
+          <div class="stage-title">Установка OpenClaw и запуск ИИ-офиса</div>
+          <p class="stage-desc">Это не «сделаем вам три бота». Это <strong style="color: var(--purple);">собственный ИИ-офис</strong> на вашей инфраструктуре, в который мы заселяем первых трёх сотрудников. Дальше вы добавляете новых сами.</p>
+        </div>
+      </div>
+
+      <!-- OPENCLAW CALLOUT -->
+      <div class="openclaw-callout">
+        <div class="openclaw-header">
+          <div class="openclaw-logo">🧠</div>
+          <h3>Что такое OpenClaw</h3>
+        </div>
+        <p class="oc-sub">
+          Платформа для автономных ИИ-агентов. В отличие от обычного ChatGPT — агент не просто отвечает, а сам выполняет задачи, помнит контекст между сессиями и инициирует действия. <strong>Сервер физически у вас или под вашим контролем</strong> — данные не уходят в третьи руки.
+        </p>
+        <div class="openclaw-features">
+          <div class="oc-feature">
+            <h5>🔒 Под вашим контролем</h5>
+            <p>Развёртывание локально или на вашем сервере. Данные не уходят в публичные облака — критично для девелопера.</p>
+          </div>
+          <div class="oc-feature">
+            <h5>💬 Telegram как интерфейс</h5>
+            <p>Команда общается с агентами через привычный мессенджер. Никаких новых приложений и обучения.</p>
+          </div>
+          <div class="oc-feature">
+            <h5>🧠 Память между сессиями</h5>
+            <p>Агент помнит контекст. Не нужно объяснять заново — он знает компанию и задачи.</p>
+          </div>
+          <div class="oc-feature">
+            <h5>⚡ Расширяемость</h5>
+            <p>Добавляете новых агентов сами — без программистов, без зависимости от подрядчиков.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="subhead">▸ Инфраструктура</div>
+      <div class="stage-grid">
+        <div class="si">Поставка и настройка сервера под OpenClaw</div>
+        <div class="si">Установка OpenClaw + подключение Telegram-бота</div>
+        <div class="si">OpenRouter + маршрутизация LLM (Claude где важно, бесплатные где можно)</div>
+        <div class="si">Whisper — голосовой ввод и расшифровка</div>
+        <div class="si">Подключение OpenClaw к базе знаний Obsidian + SharePoint</div>
+        <div class="si">Аудит безопасности под специфику девелоперского бизнеса</div>
+      </div>
+
+      <div class="subhead">▸ Первые 3 ИИ-сотрудника в офисе</div>
+      <div class="agents-grid">
+        <div class="agent-card">
+          <span class="agent-icon">🏗</span>
+          <span class="agent-tag">Агент A</span>
+          <h5>Помощник по проектам</h5>
+          <p>Знает статусы всех проектов CityView. Отвечает сотрудникам и брокерам в Telegram: «какая плитка», «когда сдача», «какие трубы», «где документ». Снимает рутину.</p>
+        </div>
+        <div class="agent-card">
+          <span class="agent-icon">🎯</span>
+          <span class="agent-tag">Агент B</span>
+          <h5>Разведчик инвесторов</h5>
+          <p>Мониторит LinkedIn и открытые источники. Квалифицирует wealth funds и family offices по критериям CityView. Готовит брифы с точками входа.</p>
+        </div>
+        <div class="agent-card">
+          <span class="agent-icon">🎙</span>
+          <span class="agent-tag">Агент D</span>
+          <h5>Секретарь встреч</h5>
+          <p>Транскрибирует Zoom и очные встречи. Делает саммари с next steps. Автоматически обновляет карточки в Битрикс24. Никаких «забыл записать».</p>
+        </div>
+      </div>
+
+      <div class="subhead">▸ Передача управления вам</div>
+      <div class="stage-grid">
+        <div class="si">Обучение Эльнура и Искандера управлению ИИ-офисом</div>
+        <div class="si">Концепция SOUL.md и MEMORY.md — «душа» и память агентов</div>
+        <div class="si">Skills OpenClaw — как расширять функционал самостоятельно</div>
+        <div class="si">Итеративная доводка всех трёх агентов на реальных задачах</div>
+      </div>
+
+      <div class="result-box"><strong>✓ Результат:</strong> Собственный ИИ-офис на вашей инфраструктуре. Три рабочих агента с первого дня. Эльнур и Искандер умеют добавлять новых агентов сами — без программистов.</div>
+
+      <div class="stage-hours">
+        <span class="hour-chip"><span class="name">Стас</span> <span class="h">14 ч</span></span>
+        <span class="hour-chip"><span class="name">Роман</span> <span class="h">13 ч</span></span>
+        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">60 ч</span></span>
+      </div>
+    </div>
+
+    <!-- STAGE 4 -->
+    <div class="stage-block">
+      <div class="stage-top">
+        <div class="stage-num">4</div>
+        <div class="stage-header-text">
+          <div class="stage-meta">
+            <span class="mtag">⏱ 19 часов</span>
+            <span class="mtag">📅 Неделя 12</span>
+            <span class="mtag green">Финал + следующий этап</span>
+          </div>
+          <div class="stage-title">Демо результатов и дорожная карта 30/60/90</div>
+          <p class="stage-desc">Закрываем этап 1. Защищаем сделанное, формируем чёткий план следующих этапов — без «спонтанности», которая болела до этого.</p>
+        </div>
+      </div>
+
+      <div class="stage-grid">
+        <div class="si">Финальная стратсессия в Дубае с командой CityView</div>
+        <div class="si">Демо всех результатов программы — три агента в работе</div>
+        <div class="si">Дорожная карта развития ИИ-офиса на 30 / 60 / 90 дней</div>
+        <div class="si">Приоритезация следующих агентов под боли CityView</div>
+        <div class="si">Защита плана этапа 2 — сложные автоматизации с разработкой</div>
+        <div class="si">Q&A — ответы на все вопросы команды</div>
+      </div>
+
+      <div class="result-box"><strong>✓ Результат:</strong> Ясная картина «куда идём». Конкретный план развития ИИ-инфраструктуры. Не спонтанность — а стратегия, согласованная всей командой.</div>
+
+      <div class="stage-hours">
+        <span class="hour-chip"><span class="name">Стас</span> <span class="h">7 ч</span></span>
+        <span class="hour-chip"><span class="name">Роман</span> <span class="h">9 ч</span></span>
+        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">3 ч</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ HOURS TABLE ============================ -->
+<section class="section" id="hours">
+  <div class="container">
+    <div class="section-label">Прозрачность ресурсов</div>
+    <h2 class="section-title">Распределение <span class="green">250 часов</span> по экспертам</h2>
+    <p class="section-sub">Показываем точно, сколько часов и на каком этапе работает каждый эксперт. Без скрытых ресурсов.</p>
+
+    <div class="hours-table-wrap">
+      <table class="hours-table">
+        <thead>
+          <tr>
+            <th>Этап</th>
+            <th>Стас</th>
+            <th>Роман</th>
+            <th>Ефим</th>
+            <th>Итого</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-stage-0">
+            <td><strong>0</strong>Стратсессия + Аудит</td>
+            <td>10</td><td>17</td><td>16</td><td>43</td>
+          </tr>
+          <tr class="row-stage-1">
+            <td><strong>1</strong>Ликбез руководства</td>
+            <td>32</td><td>5</td><td>9</td><td>46</td>
+          </tr>
+          <tr class="row-stage-2">
+            <td><strong>2</strong>База знаний</td>
+            <td>11</td><td>8</td><td>36</td><td>55</td>
+          </tr>
+          <tr class="row-stage-3">
+            <td><strong>3</strong>OpenClaw + 3 агента</td>
+            <td>14</td><td>13</td><td>60</td><td>87</td>
+          </tr>
+          <tr class="row-stage-4">
+            <td><strong>4</strong>Финал + дорожная карта</td>
+            <td>7</td><td>9</td><td>3</td><td>19</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Итого по эксперту</td>
+            <td>74 ч</td>
+            <td>52 ч</td>
+            <td>124 ч</td>
+            <td>250 ч</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ TEAM ============================ -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-label purple">Команда проекта</div>
+    <h2 class="section-title">Кто <span class="purple">внедряет</span></h2>
+    <p class="section-sub">Три эксперта с разными зонами ответственности. Один из них — Ефим — физически в Дубае.</p>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">СП</div>
+        <div class="team-name">Станислав Панков</div>
+        <div class="team-role">Методология · Продукт</div>
+        <p class="team-bio">Отвечает за программу ликбеза, промпт-инжиниринг, безопасность данных, обучение управлению агентами. Дипломированный педагог, 4+ года в EdTech.</p>
+        <div class="team-hours">⏱ 74 часа на проекте</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">РП</div>
+        <div class="team-name">Роман Пищулов</div>
+        <div class="team-role">Архитектура · Стратегия</div>
+        <p class="team-bio">Отвечает за концепцию ИИ-офиса, архитектуру агентной системы, защиту дорожной карты. IT-предприниматель, CEO SETUP, практик с AI-агентами.</p>
+        <div class="team-hours">⏱ 52 часа на проекте</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">ЕГ</div>
+        <div class="team-name">Ефим Герасимов</div>
+        <div class="team-role">Внедрение · Дубай</div>
+        <p class="team-bio">Отвечает за развёртывание OpenClaw, базу знаний, разработку агентов, интеграции. <span class="hi">Физически в Дубае</span> — выезжает в офис для установки сервера и стратсессий.</p>
+        <div class="team-hours">⏱ 124 часа на проекте</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ TIMELINE ============================ -->
+<section class="section" id="timeline">
+  <div class="container">
+    <div class="section-label">Последовательность</div>
+    <h2 class="section-title">Как разворачивается <span class="green">проект</span></h2>
+    <p class="section-sub">Этапы идут параллельно — это сокращает срок и даёт результат раньше.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-week">Недели 1–2</div>
+        <div class="tl-title">Стратсессия + Аудит</div>
+        <div class="tl-desc">Все три эксперта в Дубае. Роман ведёт интервью с руководителями, Ефим начинает аудит ИТ-стека, Стас готовит ликбез. Финал — детальный отчёт и согласование приоритетов.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-week">Недели 3–6</div>
+        <div class="tl-title">Ликбез руководства</div>
+        <div class="tl-desc">Стас ведёт сессии. Параллельно Ефим уже начинает строить базу знаний. Роман — на ключевой сессии «Введение в агенты», она же запуск этапа 3.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-week">Недели 5–9</div>
+        <div class="tl-title">База знаний</div>
+        <div class="tl-desc">Ефим в Дубае физически. Стас работает над архитектурой и регламентом. Роман прорабатывает процессы по отделам совместно с руководителями.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-week">Недели 7–11</div>
+        <div class="tl-title">OpenClaw + 3 агента</div>
+        <div class="tl-desc">Пик работы Ефима — физическое развёртывание и разработка агентов. Роман курирует архитектуру каждого. Стас обучает Эльнура и Искандера управлению.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-week">Неделя 12</div>
+        <div class="tl-title">Финал и дорожная карта</div>
+        <div class="tl-desc">Все три эксперта снова в Дубае. Демо, защита, дорожная карта 30/60/90. Согласование следующего этапа сотрудничества.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ OUTCOMES ============================ -->
+<section class="section" id="outcomes">
+  <div class="container">
+    <div class="section-label">Что остаётся у CityView</div>
+    <h2 class="section-title">Результаты <span class="green">программы</span></h2>
+    <p class="section-sub">Не теория. Работающая инфраструктура, которая останется у вас после программы.</p>
+
+    <div class="outcomes-grid">
+      <div class="oc"><span class="icon">🧠</span><h4>ИИ-офис на OpenClaw</h4><p>Собственный сервер с платформой агентов. Под вашим контролем. Расширяется без программистов.</p></div>
+      <div class="oc"><span class="icon">🏗</span><h4>Агент по проектам</h4><p>Отвечает сотрудникам и брокерам о статусах строительства, материалах, документах.</p></div>
+      <div class="oc"><span class="icon">🎯</span><h4>Разведчик инвесторов</h4><p>Мониторит LinkedIn и квалифицирует family offices. Личная боль Эльнура решена.</p></div>
+      <div class="oc"><span class="icon">🎙</span><h4>Секретарь встреч</h4><p>Транскрибирует встречи, делает саммари, обновляет Битрикс24 автоматически.</p></div>
+      <div class="oc"><span class="icon">📚</span><h4>Единая база знаний</h4><p>«Второй мозг» компании на Obsidian + SharePoint. Все будущие агенты опираются на неё.</p></div>
+      <div class="oc"><span class="icon">🎓</span><h4>Прокачанное руководство</h4><p>5 топ-менеджеров работают с ИИ профессионально. Каждый с персональным набором.</p></div>
+      <div class="oc"><span class="icon">🔒</span><h4>Регламент безопасности</h4><p>Внутренний документ: что можно, что нельзя, как анонимизировать данные.</p></div>
+      <div class="oc"><span class="icon">⚡</span><h4>Библиотека промптов</h4><p>15+ готовых промптов под задачи sales, finance, operations, construction.</p></div>
+      <div class="oc"><span class="icon">🗺</span><h4>Дорожная карта 30/60/90</h4><p>Конкретный план развития ИИ-инфраструктуры. Никакой больше «спонтанности».</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ FORMAT ============================ -->
+<section class="section" id="format">
+  <div class="container">
+    <div class="section-label purple">Формат работы</div>
+    <h2 class="section-title">Как мы <span class="purple">взаимодействуем</span></h2>
+
+    <div class="format-list">
+      <div class="fi">
+        <span class="ficon">📍</span>
+        <div class="ftext"><strong>Физическое присутствие в Дубае</strong><span>Ефим в Дубае постоянно — установка сервера и регулярная работа на месте. Стас и Роман — выездные стратсессии (открытие, ключевые точки, финал).</span></div>
+      </div>
+      <div class="fi">
+        <span class="ficon">🎥</span>
+        <div class="ftext"><strong>Все сессии записываются</strong><span>Команда может пересматривать материалы. У вас остаётся библиотека контента после программы.</span></div>
+      </div>
+      <div class="fi">
+        <span class="ficon">💬</span>
+        <div class="ftext"><strong>Чат с экспертами между модулями</strong><span>Можно задать вопрос по конкретной рабочей задаче и получить ответ от профильного эксперта.</span></div>
+      </div>
+      <div class="fi">
+        <span class="ficon">🎯</span>
+        <div class="ftext"><strong>100% работа на ваших задачах</strong><span>Все упражнения и тесты — на реальных материалах CityView. Никаких абстрактных примеров.</span></div>
+      </div>
+      <div class="fi">
+        <span class="ficon">🔒</span>
+        <div class="ftext"><strong>NDA и конфиденциальность</strong><span>Подписываем NDA на старте. Данные клиентов, проектов и финансов остаются внутри.</span></div>
+      </div>
+      <div class="fi">
+        <span class="ficon">📅</span>
+        <div class="ftext"><strong>Гибкое расписание</strong><span>Договариваемся о времени сессий под рабочий график команды. Учитываем разницу часовых поясов.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ PRICING ============================ -->
+<section class="section" id="price">
+  <div class="container">
+    <div class="pricing-wrap">
+      <div class="price-label">Стоимость этапа 1</div>
+      <div class="price-main">$30,000</div>
+      <div class="price-aed">≈ 110 100 AED</div>
+      <div class="price-per">За полный пакет работ · 3 месяца</div>
+      <div class="price-breakdown">
+        Установочная сессия и аудит · Ликбез 5 руководителей<br>
+        Единая база знаний · Собственный ИИ-офис на OpenClaw<br>
+        3 первых ИИ-сотрудника · Дорожная карта развития
+      </div>
+      <a href="#" class="cta-btn">Согласовать и стартовать →</a>
+
+      <div class="payment-formats">
+        <div class="payment-label">Форматы оплаты</div>
+        <div class="payment-options">
+          <div class="pay-option">
+            <span class="pay-icon">₿</span>
+            <div>
+              <span class="pay-title">USDT</span>
+              <span class="pay-sub">Криптовалюта · USDT</span>
+            </div>
+          </div>
+          <div class="pay-option">
+            <span class="pay-icon">🇦🇪</span>
+            <div>
+              <span class="pay-title">AED</span>
+              <span class="pay-sub">На дубайскую компанию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  © 2026 ИИ-ВИЗАЦИЯ · Корпоративное внедрение ИИ · <a href="https://ii-vizaciya.ru">ii-vizaciya.ru</a>
+  <span class="footer-meta">Коммерческое предложение подготовлено индивидуально для CityView Development</span>
+</div>
+
+</body>
+</html>
