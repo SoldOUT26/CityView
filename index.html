@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ИИ-ВИЗАЦИЯ · Коммерческое предложение для CityView</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏗</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,9 +19,9 @@
   --green-bright: #00e6ad;
   --green-dim: rgba(0,200,150,0.07);
   --green-glow: rgba(0,200,150,0.12);
-  --purple: #00c896;
-  --purple-dim: rgba(0,200,150,0.07);
-  --purple-glow: rgba(0,200,150,0.12);
+  --purple: #a78bfa;
+  --purple-dim: rgba(167,139,250,0.07);
+  --purple-glow: rgba(167,139,250,0.12);
   --white: #ffffff;
   --gray: #8a8aaa;
   --gray2: #555570;
@@ -54,7 +55,7 @@ body {
   width: 1100px; height: 1100px;
   background:
     radial-gradient(circle at 35% 50%, rgba(0,200,150,0.10) 0%, transparent 50%),
-    radial-gradient(circle at 65% 50%, rgba(0,200,150,0.07) 0%, transparent 50%);
+    radial-gradient(circle at 65% 50%, rgba(167,139,250,0.07) 0%, transparent 50%);
   pointer-events: none;
   animation: heroGlow 18s ease-in-out infinite;
 }
@@ -82,9 +83,9 @@ body {
   backdrop-filter: blur(6px);
 }
 .badge.purple {
-  border-color: rgba(0,200,150,0.35);
+  border-color: rgba(167,139,250,0.35);
   color: var(--purple);
-  background: rgba(0,200,150,0.05);
+  background: rgba(167,139,250,0.05);
 }
 
 .hero-eyebrow {
@@ -234,7 +235,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 }
 .pain-card:nth-child(2):hover,
 .pain-card:nth-child(4):hover,
-.pain-card:nth-child(6):hover { border-color: rgba(0,200,150,0.18); }
+.pain-card:nth-child(6):hover { border-color: rgba(167,139,250,0.18); }
 
 .pain-tag {
   font-family: 'JetBrains Mono', monospace;
@@ -265,7 +266,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 
 /* ============ COMPANY MAP ============ */
 .company-map {
-  background: linear-gradient(135deg, rgba(0,200,150,0.04), rgba(0,200,150,0.03));
+  background: linear-gradient(135deg, rgba(0,200,150,0.04), rgba(167,139,250,0.03));
   border: 1px solid rgba(0,200,150,0.15);
   border-radius: 24px;
   padding: 36px;
@@ -325,7 +326,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 /* ============ PRINCIPLES ============ */
 .principles-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 14px;
 }
 @media (max-width: 720px) { .principles-grid { grid-template-columns: 1fr; } }
@@ -349,7 +350,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 .principle:nth-child(3)::before { background: linear-gradient(90deg, var(--green), transparent); }
 
 .principle:hover { transform: translateY(-3px); border-color: rgba(0,200,150,0.18); }
-.principle:nth-child(2):hover { border-color: rgba(0,200,150,0.18); }
+.principle:nth-child(2):hover { border-color: rgba(167,139,250,0.18); }
 
 .principle .pnum {
   font-family: 'JetBrains Mono', monospace;
@@ -387,7 +388,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
   overflow: hidden;
 }
 .stage-block:hover { border-color: rgba(0,200,150,0.18); }
-.stage-block.stage-purple:hover { border-color: rgba(0,200,150,0.18); }
+.stage-block.stage-purple:hover { border-color: rgba(167,139,250,0.18); }
 
 .stage-top {
   display: flex; align-items: flex-start; gap: 20px;
@@ -404,9 +405,9 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
   box-shadow: 0 8px 24px -8px rgba(0,200,150,0.4);
 }
 .stage-num.purple {
-  background: linear-gradient(135deg, var(--purple), #007a5e);
+  background: linear-gradient(135deg, var(--purple), #6d28d9);
   color: #fff;
-  box-shadow: 0 8px 24px -8px rgba(0,200,150,0.4);
+  box-shadow: 0 8px 24px -8px rgba(167,139,250,0.4);
 }
 
 .stage-header-text { flex: 1; }
@@ -423,7 +424,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
   letter-spacing: 0.02em;
 }
 .mtag.green { background: var(--green-dim); border-color: rgba(0,200,150,0.25); color: var(--green); }
-.mtag.purple { background: var(--purple-dim); border-color: rgba(0,200,150,0.25); color: var(--purple); }
+.mtag.purple { background: var(--purple-dim); border-color: rgba(167,139,250,0.25); color: var(--purple); }
 
 .stage-title {
   font-size: clamp(20px, 2.6vw, 26px);
@@ -478,8 +479,8 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 .result-box strong { color: var(--green); }
 
 .stage-purple .result-box {
-  background: rgba(0,200,150,0.06);
-  border-color: rgba(0,200,150,0.18);
+  background: rgba(167,139,250,0.06);
+  border-color: rgba(167,139,250,0.18);
 }
 .stage-purple .result-box strong { color: var(--purple); }
 
@@ -527,7 +528,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 /* ============ OPENCLAW CALLOUT ============ */
 .openclaw-callout {
   background:
-    linear-gradient(135deg, rgba(0,200,150,0.08), rgba(0,200,150,0.05)),
+    linear-gradient(135deg, rgba(0,200,150,0.08), rgba(167,139,250,0.05)),
     var(--bg3);
   border: 1px solid rgba(0,200,150,0.25);
   border-radius: 22px;
@@ -621,7 +622,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
   transition: all 0.3s;
 }
 .agent-card:hover {
-  border-color: rgba(0,200,150,0.25);
+  border-color: rgba(167,139,250,0.25);
   transform: translateY(-3px);
   background: var(--bg4);
 }
@@ -629,7 +630,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
   font-size: 32px;
   margin-bottom: 14px;
   display: block;
-  filter: drop-shadow(0 4px 12px rgba(0,200,150,0.25));
+  filter: drop-shadow(0 4px 12px rgba(167,139,250,0.25));
 }
 .agent-tag {
   font-size: 10.5px;
@@ -734,7 +735,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 .team-avatar {
   width: 64px; height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(0,200,150,0.25), rgba(0,200,150,0.18));
+  background: linear-gradient(135deg, rgba(0,200,150,0.25), rgba(167,139,250,0.18));
   border: 2px solid rgba(0,200,150,0.35);
   display: flex; align-items: center; justify-content: center;
   font-size: 24px;
@@ -809,9 +810,9 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
   background: var(--green);
   box-shadow: 0 0 0 5px rgba(0,200,150,0.15);
 }
-.tl-item:nth-child(2) .tl-dot { background: var(--purple); box-shadow: 0 0 0 5px rgba(0,200,150,0.15); }
+.tl-item:nth-child(2) .tl-dot { background: var(--purple); box-shadow: 0 0 0 5px rgba(167,139,250,0.15); }
 .tl-item:nth-child(3) .tl-dot { background: var(--green); box-shadow: 0 0 0 5px rgba(0,200,150,0.15); }
-.tl-item:nth-child(4) .tl-dot { background: var(--purple); box-shadow: 0 0 0 5px rgba(0,200,150,0.15); }
+.tl-item:nth-child(4) .tl-dot { background: var(--purple); box-shadow: 0 0 0 5px rgba(167,139,250,0.15); }
 .tl-item:nth-child(5) .tl-dot { background: var(--green); box-shadow: 0 0 0 5px rgba(0,200,150,0.15); }
 
 .tl-week {
@@ -897,7 +898,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 /* ============ PRICING ============ */
 .pricing-wrap {
   background:
-    linear-gradient(135deg, rgba(0,200,150,0.04), rgba(0,200,150,0.03)),
+    linear-gradient(135deg, rgba(0,200,150,0.04), rgba(167,139,250,0.03)),
     var(--bg2);
   border: 1px solid rgba(0,200,150,0.22);
   border-radius: 28px;
@@ -919,7 +920,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
   position: absolute;
   bottom: -100px; right: -100px;
   width: 360px; height: 360px;
-  background: radial-gradient(circle, rgba(0,200,150,0.07), transparent 70%);
+  background: radial-gradient(circle, rgba(167,139,250,0.07), transparent 70%);
   pointer-events: none;
 }
 
@@ -1085,20 +1086,64 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
       <span class="badge purple">🏗 CityView Development · Dubai</span>
     </div>
 
-    <div class="hero-eyebrow">Коммерческое предложение · Этап 1</div>
+    <div class="hero-eyebrow">Коммерческое предложение · S&M-пилот · v2</div>
 
     <h1>Коммерческое предложение<br>по внедрению <span class="green">искусственного интеллекта</span><br>в процессы компании <span class="purple">CityView</span></h1>
 
     <p class="subtitle">
-      Хирургический подход к внедрению ИИ в процессы CityView. Аудит, ликбез руководства, единая база знаний и собственный ИИ-офис на OpenClaw. За 3 месяца — без вреда для текущих процессов.
+      Фрагментарный старт с одного департамента — Sales & Marketing. Самописные ИИ-агенты в вашем контуре, единая база знаний под S&M, ликбез руководства. За 2,5 месяца — без вреда для текущих процессов. Дальше масштабируем по итогам.
     </p>
 
     <div class="metrics">
-      <div class="metric"><span class="val">3</span><span class="label">Месяца</span></div>
+      <div class="metric"><span class="val">2,5</span><span class="label">Месяца</span></div>
       <div class="metric"><span class="val purple">5</span><span class="label">Этапов</span></div>
-      <div class="metric"><span class="val">250</span><span class="label">Часов</span></div>
-      <div class="metric"><span class="val purple">4</span><span class="label">Агента</span></div>
-      <div class="metric"><span class="val">1</span><span class="label">ИИ-офис</span></div>
+      <div class="metric"><span class="val">185</span><span class="label">Часов</span></div>
+      <div class="metric"><span class="val purple">3</span><span class="label">Агента</span></div>
+      <div class="metric"><span class="val">S&M</span><span class="label">Пилот</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================ FEEDBACK RESPONSE ============================ -->
+<section class="section" id="feedback">
+  <div class="container">
+    <div class="section-label">Учли вашу обратную связь</div>
+    <h2 class="section-title">Как мы <span class="green">переупаковали</span> предложение</h2>
+    <p class="section-sub">Получили развёрнутый фидбек от Искандера 29 мая. Зафиксировали 5 ключевых корректировок — и пересобрали оффер под них.</p>
+
+    <div class="pain-grid">
+      <div class="pain-card">
+        <span class="pain-tag">▸ Формат старта</span>
+        <p class="pain-quote"><strong>Вы:</strong> «Не запускать всё на всю компанию сразу. Зайти фрагментарно — с одного департамента. Sales & Marketing: отдел небольшой, процессы понятны и описаны».</p>
+        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> Полностью пересобрали скоуп под S&M-пилот. Operations — следующей волной, после результатов.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ Агенты в пилот</span>
+        <p class="pain-quote"><strong>Вы:</strong> «Под S&M логично заходят A, D, B. Агент C — это Operations/Customer Service, в следующую волну. Твёрдые обязательства — по A и D».</p>
+        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> Убрали агента C из текущего этапа. A и D — продакшн. B — research-фаза с прозрачным механизмом.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ Агент B — реализм</span>
+        <p class="pain-quote"><strong>Вы:</strong> «Мониторинг LinkedIn упирается в правила и баны. Хотим заранее понимать реальный механизм: по каким открытым источникам идёт сбор».</p>
+        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> Переформулировали в полуагентскую систему по открытым источникам — без прямого скрейпинга LinkedIn. Подробности в этапе 3.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ Безопасность</span>
+        <p class="pain-quote"><strong>Вы:</strong> «Расскажите, что входит в аудит безопасности: изоляция, права доступа, хранение секретов, план обновлений».</p>
+        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> Перешли на самописные агенты в вашем контуре. Отдельный блок безопасности в этапе 3 с 4 пунктами, которые вы запросили.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ База знаний</span>
+        <p class="pain-quote"><strong>Вы:</strong> «SharePoint остаётся системой записи. Obsidian — как слой под агентов, а не миграция компании. Для пилота — узко под S&M».</p>
+        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> База знаний строится узко под S&M. SharePoint остаётся источником правды. Obsidian — только проекция для агентов.</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ Цена</span>
+        <p class="pain-quote"><strong>Контекст:</strong> объём сужается с компании до одного департамента — справедливо пересмотреть стоимость.</p>
+        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> Скорректировали $30 000 → <strong>$20 000</strong>. Срок 3 мес → 2,5 мес. Часы 250 → 185.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1109,8 +1154,8 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 <section class="section" id="growth">
   <div class="container">
     <div class="section-label">Точки роста</div>
-    <h2 class="section-title">Какие процессы CityView<br>мы можем <span class="green">усилить</span> искусственным интеллектом</h2>
-    <p class="section-sub">Зафиксировали ключевые сигналы со звонка. От этого мы и строим дорожную карту.</p>
+    <h2 class="section-title">Какие процессы <span class="green">Sales & Marketing</span><br>мы можем усилить искусственным интеллектом</h2>
+    <p class="section-sub">Зафиксировали ключевые сигналы со звонка. Фокус в пилоте — на болях S&M-вертикали, остальные точки роста — в следующих волнах.</p>
 
     <div class="pain-grid">
       <div class="pain-card">
@@ -1208,23 +1253,28 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
   <div class="container">
     <div class="section-label purple">Принципы внедрения</div>
     <h2 class="section-title">Как мы будем работать <span class="purple">с вами</span></h2>
-    <p class="section-sub">Три принципа, согласованных на установочном звонке.</p>
+    <p class="section-sub">Четыре принципа, согласованных по итогам обсуждения.</p>
 
     <div class="principles-grid">
       <div class="principle">
         <div class="pnum">01</div>
-        <h4>Хирургически, не шашками</h4>
-        <p>Не сносим работающие процессы. Внедряем туда, где даёт результат и не создаёт риска. Цена ошибки в девелопменте высокая — действуем точечно.</p>
+        <h4>Фрагментарный старт</h4>
+        <p>Не запускаем всё на компанию сразу. Берём один департамент — Sales & Marketing. По итогам — масштабируем на Operations и дальше. Меньше риск, быстрее результат.</p>
       </div>
       <div class="principle">
         <div class="pnum">02</div>
-        <h4>Параллельные потоки</h4>
-        <p>Аудит структуры и быстрые локальные победы — одновременно. Не ждём окончания одного, чтобы начать другое. Так результат быстрее.</p>
+        <h4>Хирургически, не шашками</h4>
+        <p>Не сносим работающие процессы. Внедряем туда, где даёт результат и не создаёт риска. SharePoint остаётся системой записи, Obsidian — проекция под агентов.</p>
       </div>
       <div class="principle">
         <div class="pnum">03</div>
+        <h4>Параллельные потоки</h4>
+        <p>Аудит S&M-процессов и быстрые победы — одновременно. Не ждём окончания одного, чтобы начать другое. За 2,5 месяца — четыре потока работ параллельно.</p>
+      </div>
+      <div class="principle">
+        <div class="pnum">04</div>
         <h4>От руководства к команде</h4>
-        <p>Сначала ликбез для 5 русскоговорящих руководителей. Они становятся локомотивом. Затем — внедрение на уровне всей компании.</p>
+        <p>Сначала ликбез для руководящего состава S&M. Они становятся локомотивом. Потом — расширение на остальной отдел и масштабирование на другие департаменты.</p>
       </div>
     </div>
   </div>
@@ -1236,8 +1286,8 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 <section class="section" id="roadmap">
   <div class="container">
     <div class="section-label">Дорожная карта</div>
-    <h2 class="section-title">5 этапов · 3 месяца · <span class="green">250 часов</span> работы</h2>
-    <p class="section-sub">Этот оффер охватывает все 5 этапов. Каждый даёт измеримый результат и открывает следующий.</p>
+    <h2 class="section-title">5 этапов · 2,5 месяца · <span class="green">185 часов</span> работы</h2>
+    <p class="section-sub">Пилотный этап охватывает Sales & Marketing. Каждый этап даёт измеримый результат и открывает следующий. По итогам — масштабирование на Operations.</p>
 
     <!-- STAGE 0 -->
     <div class="stage-block">
@@ -1245,30 +1295,30 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
         <div class="stage-num">0</div>
         <div class="stage-header-text">
           <div class="stage-meta">
-            <span class="mtag">⏱ 43 часа</span>
-            <span class="mtag">📅 Недели 1–2</span>
-            <span class="mtag green">Выездная стратсессия</span>
+            <span class="mtag">⏱ 34 часа</span>
+            <span class="mtag">📅 Недели 1–3</span>
+            <span class="mtag green">Выездная стратсессия в Дубай</span>
           </div>
-          <div class="stage-title">Установочная сессия и аудит компании</div>
-          <p class="stage-desc">Погружение в процессы, оцифровка структуры, аудит ИТ-стека. Финал — отчёт с приоритетами и согласованной картой следующих этапов.</p>
+          <div class="stage-title">Аудит Sales & Marketing</div>
+          <p class="stage-desc">Глубокое погружение в процессы S&M-вертикали. Не консалтинг — аудит: фиксируем как работает сейчас, где можно усилить ИИ, где нельзя трогать. Финал — отчёт с приоритетами под пилот.</p>
         </div>
       </div>
 
       <div class="stage-grid">
-        <div class="si">Выездная стратсессия в Дубай — личное участие и присутствие наших экспертов в офисе CityView в отдельных случаях</div>
-        <div class="si">Интервью с 5 русскоговорящими руководителями отделов</div>
-        <div class="si">Анкетирование команды — фиксация уровня владения ИИ</div>
-        <div class="si">Аудит Битрикс24, SharePoint, текущих процессов</div>
-        <div class="si">Карта процессов компании с точками внедрения</div>
-        <div class="si">Сводный отчёт + презентация результатов аудита</div>
+        <div class="si">Выездная стратсессия в Дубай — личное участие наших экспертов в офисе CityView в отдельных случаях</div>
+        <div class="si">Интервью с руководителями S&M (Искандер + ключевые сотрудники)</div>
+        <div class="si">Аудит процессов отдела: воронка, контент, работа с брокерами, поиск инвесторов</div>
+        <div class="si">Анализ ИТ-стека под S&M (Битрикс24, SharePoint, что использует команда)</div>
+        <div class="si">Фиксация какие процессы готовы к ИИ-агентам, какие — нет</div>
+        <div class="si">Сводный отчёт по аудиту + презентация результатов</div>
       </div>
 
-      <div class="result-box"><strong>✓ Результат:</strong> Зафиксированная карта компании, приоритезированный список процессов под ИИ, согласованный детальный план следующих этапов.</div>
+      <div class="result-box"><strong>✓ Результат:</strong> Зафиксированная карта S&M-процессов, приоритезированный список точек внедрения, согласованный план этапов 1–4 под пилот.</div>
 
       <div class="stage-hours">
-        <span class="hour-chip"><span class="name">Стас</span> <span class="h">10 ч</span></span>
-        <span class="hour-chip"><span class="name">Роман</span> <span class="h">17 ч</span></span>
-        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">16 ч</span></span>
+        <span class="hour-chip"><span class="name">Стас</span> <span class="h">8 ч</span></span>
+        <span class="hour-chip"><span class="name">Роман</span> <span class="h">14 ч</span></span>
+        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">12 ч</span></span>
       </div>
     </div>
 
@@ -1278,32 +1328,32 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
         <div class="stage-num purple">1</div>
         <div class="stage-header-text">
           <div class="stage-meta">
-            <span class="mtag">⏱ 46 часов</span>
+            <span class="mtag">⏱ 32 часа</span>
             <span class="mtag">📅 Недели 3–6</span>
-            <span class="mtag purple">5 групповых + 2 индивидуальных</span>
+            <span class="mtag purple">5 групповых + 1 индивидуальная</span>
           </div>
-          <div class="stage-title">Ликбез для руководящего состава</div>
-          <p class="stage-desc">5 русскоговорящих руководителей выходят на профессиональный уровень работы с ИИ. Не «как Google» — а инструмент стратегического уровня.</p>
+          <div class="stage-title">Ликбез для руководства S&M</div>
+          <p class="stage-desc">Руководящий состав Sales & Marketing выходит на профессиональный уровень работы с ИИ. Не «как Google» — а инструмент стратегического уровня под их задачи.</p>
         </div>
       </div>
 
       <div class="stage-grid">
-        <div class="si">Сессия 1: Карта ИИ-инструментов + настройка Claude Projects</div>
-        <div class="si">Сессия 2: Промпт-инжиниринг под их конкретные роли</div>
-        <div class="si">Сессия 3: Deep Research для рынка недвижимости и инвесторов</div>
-        <div class="si">Сессия 4: Безопасность данных + внутренний регламент</div>
+        <div class="si">Сессия 1: Карта ИИ-инструментов + настройка Claude Projects под S&M</div>
+        <div class="si">Сессия 2: Промпт-инжиниринг под продажи и маркетинг недвижимости</div>
+        <div class="si">Сессия 3: Deep Research для рынка недвижимости Дубая</div>
+        <div class="si">Сессия 4: Безопасность данных + регламент работы с ИИ</div>
         <div class="si">Сессия 5: Введение в концепцию ИИ-агентов (вход в этап 3)</div>
-        <div class="si">Индивидуальная: Эльнур — поиск инвесторов, стратегический research</div>
-        <div class="si">Индивидуальная: Искандер — контент-стратегия, агенты в маркетинге</div>
-        <div class="si">Чат-поддержка + библиотека из 15+ промптов под их задачи</div>
+        <div class="si">Индивидуальная сессия с Искандером: контент-стратегия + агенты</div>
+        <div class="si">Чат-поддержка между сессиями</div>
+        <div class="si">Библиотека из 10+ промптов под задачи S&M</div>
       </div>
 
-      <div class="result-box"><strong>✓ Результат:</strong> 5 руководителей работают с ИИ профессионально. Каждый с персональным набором инструментов. Готовая библиотека промптов и регламент безопасности.</div>
+      <div class="result-box"><strong>✓ Результат:</strong> Руководители S&M работают с ИИ профессионально. Готовая библиотека промптов под их роли. Регламент безопасности при работе с данными клиентов.</div>
 
       <div class="stage-hours">
-        <span class="hour-chip"><span class="name">Стас</span> <span class="h">32 ч</span></span>
-        <span class="hour-chip"><span class="name">Роман</span> <span class="h">5 ч</span></span>
-        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">9 ч</span></span>
+        <span class="hour-chip"><span class="name">Стас</span> <span class="h">22 ч</span></span>
+        <span class="hour-chip"><span class="name">Роман</span> <span class="h">4 ч</span></span>
+        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">6 ч</span></span>
       </div>
     </div>
 
@@ -1313,60 +1363,60 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
         <div class="stage-num">2</div>
         <div class="stage-header-text">
           <div class="stage-meta">
-            <span class="mtag">⏱ 55 часов</span>
-            <span class="mtag">📅 Недели 5–9</span>
-            <span class="mtag green">Параллельно с ликбезом</span>
+            <span class="mtag">⏱ 36 часов</span>
+            <span class="mtag">📅 Недели 4–7</span>
+            <span class="mtag green">Узко под S&M</span>
           </div>
-          <div class="stage-title">Единая база знаний CityView</div>
-          <p class="stage-desc">Решаем главный блокер: данные раскиданы по SharePoint, Битрикс24, Obsidian и личным сессиям Claude. Строим единое хранилище, которое потом «кормит» агентов.</p>
+          <div class="stage-title">База знаний под S&M-агентов</div>
+          <p class="stage-desc">Не миграция компании — точечная база знаний под пилотных агентов. SharePoint остаётся системой записи. Obsidian — слой-проекция, который читают агенты. Только для данных S&M.</p>
         </div>
       </div>
 
       <div class="stage-grid">
-        <div class="si">Архитектура базы знаний — структура, метаданные, теги</div>
-        <div class="si">Развёртывание Obsidian как единого источника правды</div>
-        <div class="si">Импорт данных из SharePoint — с автоматизацией где возможно</div>
-        <div class="si">Структурирование процессов по каждому отделу с руководителями</div>
-        <div class="si">Наполнение контекстом проектов CityView — критично для агентов</div>
-        <div class="si">Регламент работы с базой + обучение наполнителей</div>
+        <div class="si">Архитектура базы знаний — структура, метаданные, теги под S&M</div>
+        <div class="si">Развёртывание Obsidian как слоя под агентов (не замена SharePoint)</div>
+        <div class="si">Подключение SharePoint через MCP — синхронизация данных без миграции</div>
+        <div class="si">Структурирование S&M-процессов с руководителями</div>
+        <div class="si">Наполнение контекстом продуктовой линейки CityView</div>
+        <div class="si">Регламент работы с базой знаний + обучение наполнителей</div>
       </div>
 
-      <div class="result-box"><strong>✓ Результат:</strong> У компании появляется «второй мозг» — единое место со всеми данными. К нему подключаются ИИ-агенты. Сотрудники знают, как наполнять и поддерживать.</div>
+      <div class="result-box"><strong>✓ Результат:</strong> Слой базы знаний под S&M-агентов. SharePoint остаётся источником правды. Команда S&M умеет поддерживать структуру. Готова к подключению агентов.</div>
 
       <div class="stage-hours">
-        <span class="hour-chip"><span class="name">Стас</span> <span class="h">11 ч</span></span>
-        <span class="hour-chip"><span class="name">Роман</span> <span class="h">8 ч</span></span>
-        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">36 ч</span></span>
+        <span class="hour-chip"><span class="name">Стас</span> <span class="h">8 ч</span></span>
+        <span class="hour-chip"><span class="name">Роман</span> <span class="h">6 ч</span></span>
+        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">22 ч</span></span>
       </div>
     </div>
 
-    <!-- STAGE 3 with OpenClaw callout -->
+    <!-- STAGE 3 -->
     <div class="stage-block stage-purple">
       <div class="stage-top">
         <div class="stage-num purple">3</div>
         <div class="stage-header-text">
           <div class="stage-meta">
-            <span class="mtag">⏱ 87 часов</span>
-            <span class="mtag">📅 Недели 7–11</span>
-            <span class="mtag purple">Физическое развёртывание</span>
+            <span class="mtag">⏱ 71 час</span>
+            <span class="mtag">📅 Недели 5–9</span>
+            <span class="mtag purple">3 агента в вашем контуре</span>
           </div>
-          <div class="stage-title">Установка OpenClaw и запуск ИИ-офиса</div>
-          <p class="stage-desc">Это не «сделаем вам четыре бота». Это <strong style="color: var(--purple);">собственный ИИ-офис</strong> на вашей инфраструктуре, в который мы заселяем первых четырёх сотрудников. Дальше вы добавляете новых сами.</p>
+          <div class="stage-title">Разработка ИИ-агентов под S&M</div>
+          <p class="stage-desc">Не готовая платформа. <strong style="color: var(--purple);">Самописные ИИ-агенты в вашем контуре</strong> — разворачиваем на сервере под вашим контролем. Полная прозрачность кода, никаких облачных платформ-посредников, никаких сторонних зависимостей с уязвимостями.</p>
         </div>
       </div>
 
-      <!-- OPENCLAW CALLOUT -->
+      <!-- TECHNOLOGY CALLOUT -->
       <div class="openclaw-callout">
         <div class="openclaw-header">
-          <h3>Что такое OpenClaw</h3>
+          <h3>Подход: самописные агенты в вашем контуре</h3>
         </div>
         <p class="oc-sub">
-          Платформа для автономных ИИ-агентов. В отличие от обычного ChatGPT — агент не просто отвечает, а сам выполняет задачи, помнит контекст между сессиями и инициирует действия. <strong>Сервер физически у вас или под вашим контролем</strong> — данные не уходят в третьи руки.
+          Каждый агент — отдельное приложение под вашу задачу. Код пишется индивидуально под процессы CityView, разворачивается на вашем сервере. <strong>Никаких «коробочных» платформ</strong> — это снимает риски, о которых вы написали в фидбеке (изоляция, права доступа, сторонние уязвимости).
         </p>
         <div class="openclaw-features">
           <div class="oc-feature">
-            <h5>🔒 Под вашим контролем</h5>
-            <p>Развёртывание локально или на вашем сервере. Данные не уходят в публичные облака — критично для девелопера.</p>
+            <h5>🔒 В вашем контуре</h5>
+            <p>Сервер под вашим контролем. Данные не уходят в публичные облака. Полная изоляция критична для девелопера.</p>
           </div>
           <div class="oc-feature">
             <h5>💬 Telegram как интерфейс</h5>
@@ -1377,64 +1427,57 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
             <p>Агент помнит контекст. Не нужно объяснять заново — он знает компанию и задачи.</p>
           </div>
           <div class="oc-feature">
-            <h5>⚡ Расширяемость</h5>
-            <p>Добавляете новых агентов сами — без программистов, без зависимости от подрядчиков.</p>
+            <h5>⚡ Открытый код</h5>
+            <p>Весь код агентов остаётся у вас. Можете дорабатывать сами или с любым подрядчиком — никакого вендор-лока.</p>
           </div>
         </div>
       </div>
 
-      <div class="subhead">▸ Инфраструктура</div>
-      <div class="stage-grid">
-        <div class="si">Поставка и настройка сервера под OpenClaw</div>
-        <div class="si">Установка OpenClaw + подключение Telegram-бота</div>
-        <div class="si">OpenRouter + маршрутизация LLM (Claude где важно, бесплатные где можно)</div>
-        <div class="si">Whisper — голосовой ввод и расшифровка</div>
-        <div class="si">Подключение OpenClaw к базе знаний Obsidian + SharePoint</div>
-        <div class="si">Аудит безопасности под специфику девелоперского бизнеса</div>
-      </div>
-
-      <div class="subhead">▸ Первые 4 ИИ-сотрудника в офисе</div>
+      <div class="subhead">▸ Три агента в пилот</div>
       <div class="agents-grid">
         <div class="agent-card">
           <span class="agent-icon">🏗</span>
-          <span class="agent-tag">Агент A</span>
+          <span class="agent-tag" style="color: var(--green);">Агент A · ПРОДАКШН</span>
           <h5>Помощник по проектам</h5>
-          <p>Знает статусы всех проектов CityView. Отвечает сотрудникам и брокерам в Telegram: «какая плитка», «когда сдача», «какие трубы», «где документ». Снимает рутину.</p>
-        </div>
-        <div class="agent-card">
-          <span class="agent-icon">🎯</span>
-          <span class="agent-tag">Агент B</span>
-          <h5>Разведчик инвесторов</h5>
-          <p>Мониторит LinkedIn и открытые источники. Квалифицирует wealth funds и family offices по критериям CityView. Готовит брифы с точками входа.</p>
-        </div>
-        <div class="agent-card">
-          <span class="agent-icon">🤝</span>
-          <span class="agent-tag">Агент C</span>
-          <h5>AI-менеджер 24/7</h5>
-          <p>Личный менеджер для клиентов, которые уже купили и зашли в стройку. На связи круглосуточно в Telegram и WhatsApp. Отвечает на вопросы по конкретной квартире: статус, материалы, сроки. Держит клиента в зоне спокойствия — сообщения не копятся, никто не остаётся без ответа.</p>
+          <p>Знает статусы проектов CityView, материалы, документы, сроки. Отвечает сотрудникам S&M и брокерам в Telegram. Подключён к базе знаний из этапа 2. Сдаётся как продакшн с твёрдыми обязательствами.</p>
         </div>
         <div class="agent-card">
           <span class="agent-icon">🎙</span>
-          <span class="agent-tag">Агент D</span>
+          <span class="agent-tag" style="color: var(--green);">Агент D · ПРОДАКШН</span>
           <h5>Секретарь встреч</h5>
-          <p>Транскрибирует Zoom и очные встречи. Делает саммари с next steps. Автоматически обновляет карточки в Битрикс24. Никаких «забыл записать».</p>
+          <p>Транскрибирует Zoom-встречи и очные звонки. Делает саммари с next steps. Автоматически обновляет карточки в Битрикс24. У нас уже почти готовое решение под этот кейс. Сдаётся как продакшн.</p>
         </div>
+        <div class="agent-card">
+          <span class="agent-icon">🎯</span>
+          <span class="agent-tag" style="color: var(--purple);">Агент B · RESEARCH</span>
+          <h5>Разведчик инвесторов</h5>
+          <p>Полуагентская система по открытым источникам: SEC, регистры фондов, специализированные базы. <strong style="color: var(--purple);">Не прямой скрейпинг LinkedIn</strong> — обходим риск банов. Этап исследовательский: на старте показываем механизм и зону результата, чтобы синхронизировать ожидания.</p>
+        </div>
+      </div>
+
+      <div class="subhead">▸ Безопасность — отдельный блок</div>
+      <p style="font-size: 14px; color: var(--gray); margin-bottom: 14px; line-height: 1.6;">По вашему запросу — что входит в аудит безопасности агентов. Все четыре пункта прорабатываем явно и фиксируем в документации.</p>
+      <div class="stage-grid">
+        <div class="si"><strong style="color: var(--white);">Изоляция:</strong> агенты в отдельной сетевой зоне, изолированы от продакшн-систем CityView</div>
+        <div class="si"><strong style="color: var(--white);">Права доступа:</strong> принцип минимальных привилегий, только нужные API-доступы под каждого агента</div>
+        <div class="si"><strong style="color: var(--white);">Хранение секретов:</strong> ключи в шифрованном хранилище, не в коде, ротация по графику</div>
+        <div class="si"><strong style="color: var(--white);">План обновлений:</strong> регламент patch-management, мониторинг уязвимостей зависимостей</div>
       </div>
 
       <div class="subhead">▸ Передача управления вам</div>
       <div class="stage-grid">
-        <div class="si">Обучение Эльнура и Искандера управлению ИИ-офисом</div>
-        <div class="si">Концепция SOUL.md и MEMORY.md — «душа» и память агентов</div>
-        <div class="si">Skills OpenClaw — как расширять функционал самостоятельно</div>
-        <div class="si">Итеративная доводка всех четырёх агентов на реальных задачах</div>
+        <div class="si">Обучение Искандера управлению агентами</div>
+        <div class="si">Документация на код каждого агента — что делает, как работает, как менять</div>
+        <div class="si">Итеративная доводка A и D на реальных задачах S&M</div>
+        <div class="si">По агенту B — демонстрация результатов и согласование roadmap для продакшн-фазы</div>
       </div>
 
-      <div class="result-box"><strong>✓ Результат:</strong> Собственный ИИ-офис на вашей инфраструктуре. Четыре рабочих агента с первого дня. Эльнур и Искандер умеют добавлять новых агентов сами — без программистов.</div>
+      <div class="result-box"><strong>✓ Результат:</strong> Два рабочих агента в продакшне (A и D), один research-прототип с понятным механизмом (B). Весь код в вашем контуре. Документация на руках. Полная безопасность по 4 запрошенным пунктам.</div>
 
       <div class="stage-hours">
-        <span class="hour-chip"><span class="name">Стас</span> <span class="h">14 ч</span></span>
-        <span class="hour-chip"><span class="name">Роман</span> <span class="h">13 ч</span></span>
-        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">60 ч</span></span>
+        <span class="hour-chip"><span class="name">Стас</span> <span class="h">20 ч</span></span>
+        <span class="hour-chip"><span class="name">Роман</span> <span class="h">10 ч</span></span>
+        <span class="hour-chip"><span class="name">Ефим</span> <span class="h">41 ч</span></span>
       </div>
     </div>
 
@@ -1444,29 +1487,29 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
         <div class="stage-num">4</div>
         <div class="stage-header-text">
           <div class="stage-meta">
-            <span class="mtag">⏱ 19 часов</span>
-            <span class="mtag">📅 Неделя 12</span>
-            <span class="mtag green">Финал + следующий этап</span>
+            <span class="mtag">⏱ 12 часов</span>
+            <span class="mtag">📅 Неделя 10</span>
+            <span class="mtag green">Финал + волна 2 (Operations)</span>
           </div>
-          <div class="stage-title">Демо результатов и дорожная карта 30/60/90</div>
-          <p class="stage-desc">Закрываем этап 1. Защищаем сделанное, формируем чёткий план следующих этапов — без «спонтанности», которая болела до этого.</p>
+          <div class="stage-title">Демо S&M-пилота и план волны 2</div>
+          <p class="stage-desc">Закрываем S&M-пилот. Показываем результаты. Готовим план расширения на Operations — там процессов больше и они менее формализованы, поэтому отдельный аудит и отдельный этап.</p>
         </div>
       </div>
 
       <div class="stage-grid">
         <div class="si">Финальная стратсессия в Дубае с командой CityView</div>
-        <div class="si">Демо всех результатов программы — три агента в работе</div>
-        <div class="si">Дорожная карта развития ИИ-офиса на 30 / 60 / 90 дней</div>
-        <div class="si">Приоритезация следующих агентов под боли CityView</div>
-        <div class="si">Защита плана этапа 2 — сложные автоматизации с разработкой</div>
+        <div class="si">Демо результатов S&M-пилота — агенты A и D в работе</div>
+        <div class="si">Презентация результатов research-фазы по агенту B</div>
+        <div class="si">План волны 2 — расширение на Operations и Customer Service</div>
+        <div class="si">Предварительная оценка скоупа для агента C (клиенты в стройке)</div>
         <div class="si">Q&A — ответы на все вопросы команды</div>
       </div>
 
-      <div class="result-box"><strong>✓ Результат:</strong> Ясная картина «куда идём». Конкретный план развития ИИ-инфраструктуры. Не спонтанность — а стратегия, согласованная всей командой.</div>
+      <div class="result-box"><strong>✓ Результат:</strong> Закрытый S&M-пилот с измеримым результатом. Согласованный план волны 2. Понятная экономика расширения. Команда CityView подготовлена к следующему этапу.</div>
 
       <div class="stage-hours">
-        <span class="hour-chip"><span class="name">Стас</span> <span class="h">7 ч</span></span>
-        <span class="hour-chip"><span class="name">Роман</span> <span class="h">9 ч</span></span>
+        <span class="hour-chip"><span class="name">Стас</span> <span class="h">4 ч</span></span>
+        <span class="hour-chip"><span class="name">Роман</span> <span class="h">5 ч</span></span>
         <span class="hour-chip"><span class="name">Ефим</span> <span class="h">3 ч</span></span>
       </div>
     </div>
@@ -1479,7 +1522,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 <section class="section" id="hours">
   <div class="container">
     <div class="section-label">Прозрачность ресурсов</div>
-    <h2 class="section-title">Распределение <span class="green">250 часов</span> по экспертам</h2>
+    <h2 class="section-title">Распределение <span class="green">185 часов</span> по экспертам</h2>
     <p class="section-sub">Показываем точно, сколько часов и на каком этапе работает каждый эксперт. Без скрытых ресурсов.</p>
 
     <div class="hours-table-wrap">
@@ -1495,33 +1538,33 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
         </thead>
         <tbody>
           <tr class="row-stage-0">
-            <td><strong>0</strong>Стратсессия + Аудит</td>
-            <td>10</td><td>17</td><td>16</td><td>43</td>
+            <td><strong>0</strong>Аудит Sales & Marketing</td>
+            <td>8</td><td>14</td><td>12</td><td>34</td>
           </tr>
           <tr class="row-stage-1">
-            <td><strong>1</strong>Ликбез руководства</td>
-            <td>32</td><td>5</td><td>9</td><td>46</td>
+            <td><strong>1</strong>Ликбез руководства S&M</td>
+            <td>22</td><td>4</td><td>6</td><td>32</td>
           </tr>
           <tr class="row-stage-2">
-            <td><strong>2</strong>База знаний</td>
-            <td>11</td><td>8</td><td>36</td><td>55</td>
+            <td><strong>2</strong>База знаний под S&M</td>
+            <td>8</td><td>6</td><td>22</td><td>36</td>
           </tr>
           <tr class="row-stage-3">
-            <td><strong>3</strong>OpenClaw + 3 агента</td>
-            <td>14</td><td>13</td><td>60</td><td>87</td>
+            <td><strong>3</strong>3 ИИ-агента в вашем контуре</td>
+            <td>20</td><td>10</td><td>41</td><td>71</td>
           </tr>
           <tr class="row-stage-4">
-            <td><strong>4</strong>Финал + дорожная карта</td>
-            <td>7</td><td>9</td><td>3</td><td>19</td>
+            <td><strong>4</strong>Финал + план волны 2</td>
+            <td>4</td><td>5</td><td>3</td><td>12</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
             <td>Итого по эксперту</td>
-            <td>74 ч</td>
-            <td>52 ч</td>
-            <td>124 ч</td>
-            <td>250 ч</td>
+            <td>62 ч</td>
+            <td>39 ч</td>
+            <td>84 ч</td>
+            <td>185 ч</td>
           </tr>
         </tfoot>
       </table>
@@ -1543,22 +1586,22 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
         <div class="team-avatar">СП</div>
         <div class="team-name">Станислав Панков</div>
         <div class="team-role">Методология · Продукт</div>
-        <p class="team-bio">Отвечает за программу ликбеза, промпт-инжиниринг, безопасность данных, обучение управлению агентами. Дипломированный педагог, 4+ года в EdTech.</p>
-        <div class="team-hours">⏱ 74 часа на проекте</div>
+        <p class="team-bio">Отвечает за программу ликбеза, промпт-инжиниринг, безопасность данных, разработку агентов B и D. Дипломированный педагог, 4+ года в EdTech.</p>
+        <div class="team-hours">⏱ 62 часа на проекте</div>
       </div>
       <div class="team-card">
         <div class="team-avatar">РП</div>
         <div class="team-name">Роман Пищулов</div>
         <div class="team-role">Архитектура · Стратегия</div>
-        <p class="team-bio">Отвечает за концепцию ИИ-офиса, архитектуру агентной системы, защиту дорожной карты. IT-предприниматель, CEO SETUP, практик с AI-агентами.</p>
-        <div class="team-hours">⏱ 52 часа на проекте</div>
+        <p class="team-bio">Отвечает за концепцию агентной системы, защиту дорожной карты, план волны 2. IT-предприниматель, CEO SETUP, практик с AI-агентами.</p>
+        <div class="team-hours">⏱ 39 часов на проекте</div>
       </div>
       <div class="team-card">
         <div class="team-avatar">ЕГ</div>
         <div class="team-name">Ефим Герасимов</div>
         <div class="team-role">Внедрение · Дубай</div>
-        <p class="team-bio">Отвечает за развёртывание OpenClaw, базу знаний, разработку агентов, интеграции. <span class="hi">Физически в Дубае</span> — выезжает в офис для установки сервера и стратсессий.</p>
-        <div class="team-hours">⏱ 124 часа на проекте</div>
+        <p class="team-bio">Отвечает за разработку агентов, базу знаний, интеграции. <span class="hi">Физически в Дубае</span> — выезжает в офис для стратсессий и работы на месте.</p>
+        <div class="team-hours">⏱ 84 часа на проекте</div>
       </div>
     </div>
   </div>
@@ -1576,33 +1619,33 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-week">Недели 1–2</div>
-        <div class="tl-title">Стратсессия + Аудит</div>
-        <div class="tl-desc">Все три эксперта в Дубае. Роман ведёт интервью с руководителями, Ефим начинает аудит ИТ-стека, Стас готовит ликбез. Финал — детальный отчёт и согласование приоритетов.</div>
+        <div class="tl-week">Недели 1–3</div>
+        <div class="tl-title">Аудит Sales & Marketing</div>
+        <div class="tl-desc">Все три эксперта запускают проект. Роман ведёт интервью с руководителями S&M, Ефим разбирается с ИТ-стеком, Стас готовит ликбез. Финал — отчёт по аудиту S&M-вертикали.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-week">Недели 3–6</div>
-        <div class="tl-title">Ликбез руководства</div>
-        <div class="tl-desc">Стас ведёт сессии. Параллельно Ефим уже начинает строить базу знаний. Роман — на ключевой сессии «Введение в агенты», она же запуск этапа 3.</div>
+        <div class="tl-title">Ликбез руководства S&M</div>
+        <div class="tl-desc">Стас ведёт сессии. Параллельно Ефим начинает строить базу знаний. Роман — на ключевой сессии «Введение в агенты», она же запуск этапа 3.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-week">Недели 4–7</div>
+        <div class="tl-title">База знаний под S&M</div>
+        <div class="tl-desc">Ефим в Дубае физически. Стас работает над архитектурой и регламентом. Роман прорабатывает S&M-процессы с командой.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-week">Недели 5–9</div>
-        <div class="tl-title">База знаний</div>
-        <div class="tl-desc">Ефим в Дубае физически. Стас работает над архитектурой и регламентом. Роман прорабатывает процессы по отделам совместно с руководителями.</div>
+        <div class="tl-title">3 ИИ-агента в вашем контуре</div>
+        <div class="tl-desc">Пик работы Ефима — разработка агентов A и B, развёртывание на вашем сервере. Стас делает агента D и поддерживает по безопасности. Роман курирует архитектуру и подход.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-week">Недели 7–11</div>
-        <div class="tl-title">OpenClaw + 3 агента</div>
-        <div class="tl-desc">Пик работы Ефима — физическое развёртывание и разработка агентов. Роман курирует архитектуру каждого. Стас обучает Эльнура и Искандера управлению.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-week">Неделя 12</div>
-        <div class="tl-title">Финал и дорожная карта</div>
-        <div class="tl-desc">Все три эксперта снова в Дубае. Демо, защита, дорожная карта 30/60/90. Согласование следующего этапа сотрудничества.</div>
+        <div class="tl-week">Неделя 10</div>
+        <div class="tl-title">Финал и план волны 2</div>
+        <div class="tl-desc">Все три эксперта снова в Дубае. Демо S&M-пилота. Защита плана расширения на Operations. Согласование экономики следующего этапа.</div>
       </div>
     </div>
   </div>
@@ -1614,20 +1657,19 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 <section class="section" id="outcomes">
   <div class="container">
     <div class="section-label">Что остаётся у CityView</div>
-    <h2 class="section-title">Результаты <span class="green">программы</span></h2>
-    <p class="section-sub">Не теория. Работающая инфраструктура, которая останется у вас после программы.</p>
+    <h2 class="section-title">Результаты <span class="green">S&M-пилота</span></h2>
+    <p class="section-sub">Не теория. Работающая инфраструктура, которая останется у вас после программы. Полностью в вашем контуре.</p>
 
     <div class="outcomes-grid">
-      <div class="oc"><span class="icon">🧠</span><h4>ИИ-офис на OpenClaw</h4><p>Собственный сервер с платформой агентов. Под вашим контролем. Расширяется без программистов.</p></div>
-      <div class="oc"><span class="icon">🏗</span><h4>Агент по проектам</h4><p>Отвечает сотрудникам и брокерам о статусах строительства, материалах, документах.</p></div>
-      <div class="oc"><span class="icon">🎯</span><h4>Разведчик инвесторов</h4><p>Мониторит LinkedIn и квалифицирует family offices. Личная боль Эльнура решена.</p></div>
-      <div class="oc"><span class="icon">🤝</span><h4>AI-менеджер 24/7</h4><p>На связи с клиентами в стройке круглосуточно. Никаких потерянных сообщений, всегда зона спокойствия.</p></div>
-      <div class="oc"><span class="icon">🎙</span><h4>Секретарь встреч</h4><p>Транскрибирует встречи, делает саммари, обновляет Битрикс24 автоматически.</p></div>
-      <div class="oc"><span class="icon">📚</span><h4>Единая база знаний</h4><p>«Второй мозг» компании на Obsidian + SharePoint. Все будущие агенты опираются на неё.</p></div>
-      <div class="oc"><span class="icon">🎓</span><h4>Прокачанное руководство</h4><p>5 топ-менеджеров работают с ИИ профессионально. Каждый с персональным набором.</p></div>
-      <div class="oc"><span class="icon">🔒</span><h4>Регламент безопасности</h4><p>Внутренний документ: что можно, что нельзя, как анонимизировать данные.</p></div>
-      <div class="oc"><span class="icon">⚡</span><h4>Библиотека промптов</h4><p>15+ готовых промптов под задачи sales, finance, operations, construction.</p></div>
-      <div class="oc"><span class="icon">🗺</span><h4>Дорожная карта 30/60/90</h4><p>Конкретный план развития ИИ-инфраструктуры. Никакой больше «спонтанности».</p></div>
+      <div class="oc"><span class="icon">🏗</span><h4>Агент A · продакшн</h4><p>Помощник по проектам. Знает статусы, материалы, документы. Отвечает в Telegram сотрудникам S&M и брокерам.</p></div>
+      <div class="oc"><span class="icon">🎙</span><h4>Агент D · продакшн</h4><p>Секретарь встреч. Транскрибирует звонки, делает саммари, обновляет Битрикс24 автоматически.</p></div>
+      <div class="oc"><span class="icon">🎯</span><h4>Агент B · research</h4><p>Полуагентская система разведки инвесторов по открытым источникам. Прозрачный механизм, понятный потолок.</p></div>
+      <div class="oc"><span class="icon">📚</span><h4>База знаний под S&M</h4><p>Слой Obsidian под агентов. SharePoint остаётся источником правды. Расширяется на другие отделы.</p></div>
+      <div class="oc"><span class="icon">🎓</span><h4>Прокачанное руководство S&M</h4><p>Искандер и команда работают с ИИ профессионально. Готовая библиотека из 10+ промптов под их задачи.</p></div>
+      <div class="oc"><span class="icon">🔒</span><h4>Регламент безопасности</h4><p>4 пункта: изоляция, права доступа, хранение секретов, план обновлений. Документация на руках.</p></div>
+      <div class="oc"><span class="icon">💻</span><h4>Код агентов в вашем контуре</h4><p>Весь исходный код у вас. Никакого вендор-лока. Можете дорабатывать сами или с любым подрядчиком.</p></div>
+      <div class="oc"><span class="icon">📋</span><h4>Документация на каждого агента</h4><p>Что делает, как работает, как менять. Команда CityView может поддерживать и развивать.</p></div>
+      <div class="oc"><span class="icon">🗺</span><h4>План волны 2 — Operations</h4><p>Согласованный план расширения на Operations и Customer Service. Понятная экономика следующего этапа.</p></div>
     </div>
   </div>
 </section>
@@ -1675,14 +1717,14 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 <section class="section" id="price">
   <div class="container">
     <div class="pricing-wrap">
-      <div class="price-label">Стоимость этапа 1</div>
-      <div class="price-main">$30,000</div>
-      <div class="price-aed">≈ 110 100 AED</div>
-      <div class="price-per">За полный пакет работ · 3 месяца</div>
+      <div class="price-label">Стоимость S&M-пилота</div>
+      <div class="price-main">$20,000</div>
+      <div class="price-aed">≈ 73 400 AED</div>
+      <div class="price-per">За полный пакет работ · 2,5 месяца</div>
       <div class="price-breakdown">
-        Установочная сессия и аудит · Ликбез 5 руководителей<br>
-        Единая база знаний · Собственный ИИ-офис на OpenClaw<br>
-        4 первых ИИ-сотрудника · Дорожная карта развития
+        Аудит Sales & Marketing · Ликбез руководства S&M<br>
+        База знаний под пилот · 3 ИИ-агента в вашем контуре<br>
+        Регламент безопасности · План волны 2 (Operations)
       </div>
       <a href="#" class="cta-btn">Согласовать и стартовать →</a>
 
