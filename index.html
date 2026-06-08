@@ -1063,6 +1063,9 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 }
 
 /* ============ RESPONSIVE ============ */
+@media (max-width: 720px) {
+  .process-grid { grid-template-columns: 1fr !important; }
+}
 @media (max-width: 640px) {
   .hero { padding: 70px 0 50px; }
   .section { padding: 64px 0; }
@@ -1086,195 +1089,69 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
       <span class="badge purple">🏗 CityView Development · Dubai</span>
     </div>
 
-    <div class="hero-eyebrow">Коммерческое предложение · S&M-пилот · v2</div>
+    <div class="hero-eyebrow">Коммерческое предложение для CityView</div>
 
-    <h1>Коммерческое предложение<br>по внедрению <span class="green">искусственного интеллекта</span><br>в процессы компании <span class="purple">CityView</span></h1>
+    <h1>Внедрение <span class="green">искусственного интеллекта</span><br>в процессы компании <span class="purple">CityView</span></h1>
 
     <p class="subtitle">
-      Фрагментарный старт с одного департамента — Sales & Marketing. Самописные ИИ-агенты в вашем контуре, единая база знаний под S&M, ликбез руководства. За 2,5 месяца — без вреда для текущих процессов. Дальше масштабируем по итогам.
+      Корпоративное обучение для трёх отделов — Sales & Marketing, Construction, Finance. Внедрение первых ИИ-агентов в Sales & Marketing. Аудит процессов, единая база знаний под пилот, регламент безопасности. Старт за 3 недели, полный цикл — 2,5 месяца.
     </p>
 
     <div class="metrics">
       <div class="metric"><span class="val">2,5</span><span class="label">Месяца</span></div>
-      <div class="metric"><span class="val purple">5</span><span class="label">Этапов</span></div>
-      <div class="metric"><span class="val">185</span><span class="label">Часов</span></div>
-      <div class="metric"><span class="val purple">3</span><span class="label">Агента</span></div>
-      <div class="metric"><span class="val">S&M</span><span class="label">Пилот</span></div>
+      <div class="metric"><span class="val purple">3</span><span class="label">Отдела обучаем</span></div>
+      <div class="metric"><span class="val">185</span><span class="label">Часов работы</span></div>
+      <div class="metric"><span class="val purple">3</span><span class="label">Агента в S&M</span></div>
+      <div class="metric"><span class="val">$20k</span><span class="label">Стоимость</span></div>
     </div>
   </div>
 </section>
 
 <hr class="divider">
 
-<!-- ============================ FEEDBACK RESPONSE ============================ -->
-<section class="section" id="feedback">
+<!-- ============================ SCOPE OF WORK ============================ -->
+<section class="section" id="scope">
   <div class="container">
-    <div class="section-label">Учли вашу обратную связь</div>
-    <h2 class="section-title">Как мы <span class="green">переупаковали</span> предложение</h2>
-    <p class="section-sub">Получили развёрнутый фидбек от Искандера 29 мая. Зафиксировали 5 ключевых корректировок — и пересобрали оффер под них.</p>
+    <div class="section-label">Состав работ</div>
+    <h2 class="section-title">Что входит в <span class="green">оффер</span></h2>
+    <p class="section-sub">Два параллельных трека работ. Обучение охватывает три отдела. Внедрение агентов — только Sales & Marketing.</p>
 
     <div class="pain-grid">
       <div class="pain-card">
-        <span class="pain-tag">▸ Формат старта</span>
-        <p class="pain-quote"><strong>Вы:</strong> «Не запускать всё на всю компанию сразу. Зайти фрагментарно — с одного департамента. Sales & Marketing: отдел небольшой, процессы понятны и описаны».</p>
-        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> Полностью пересобрали скоуп под S&M-пилот. Operations — следующей волной, после результатов.</p>
+        <span class="pain-tag">▸ Трек 1 · Обучение</span>
+        <p class="pain-quote"><strong style="color: var(--white);">Корпоративное обучение для 3 отделов:</strong><br>
+        ▸ Sales & Marketing — продажи, контент, работа с брокерами<br>
+        ▸ Construction — управление проектами, документы, отчётность<br>
+        ▸ Finance — договоры, инвойсы, IFRS, Excel-автоматизации</p>
+        <p class="pain-source">Стас Панков · 5 онлайн-сессий + индивидуальные брифинги · детальная программа формируется по итогам аудита</p>
       </div>
       <div class="pain-card">
-        <span class="pain-tag">▸ Агенты в пилот</span>
-        <p class="pain-quote"><strong>Вы:</strong> «Под S&M логично заходят A, D, B. Агент C — это Operations/Customer Service, в следующую волну. Твёрдые обязательства — по A и D».</p>
-        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> Убрали агента C из текущего этапа. A и D — продакшн. B — research-фаза с прозрачным механизмом.</p>
+        <span class="pain-tag">▸ Трек 2 · Внедрение</span>
+        <p class="pain-quote"><strong style="color: var(--white);">3 ИИ-агента в Sales & Marketing:</strong><br>
+        ▸ Агент A — Помощник по проектам (статусы, документы)<br>
+        ▸ Агент D — Секретарь встреч (транскрибация, Битрикс24)<br>
+        ▸ Агент B — Разведчик инвесторов (research-фаза)</p>
+        <p class="pain-source">Ефим Герасимов · самописные агенты в вашем контуре · детальная дорожная карта от Ефима — в финальной версии оффера</p>
       </div>
       <div class="pain-card">
-        <span class="pain-tag">▸ Агент B — реализм</span>
-        <p class="pain-quote"><strong>Вы:</strong> «Мониторинг LinkedIn упирается в правила и баны. Хотим заранее понимать реальный механизм: по каким открытым источникам идёт сбор».</p>
-        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> Переформулировали в полуагентскую систему по открытым источникам — без прямого скрейпинга LinkedIn. Подробности в этапе 3.</p>
+        <span class="pain-tag">▸ Аудит и анкетирование</span>
+        <p class="pain-quote"><strong style="color: var(--white);">Первые 3 недели:</strong> погружение в процессы каждого из 3 отделов, анкеты для руководителей, фиксация уровня владения ИИ в команде. Это основа для всей программы обучения и плана внедрения.</p>
+        <p class="pain-source">Стас + Роман + Ефим · 34 часа</p>
+      </div>
+      <div class="pain-card">
+        <span class="pain-tag">▸ База знаний под S&M</span>
+        <p class="pain-quote"><strong style="color: var(--white);">Слой Obsidian</strong> под пилотных агентов. SharePoint остаётся системой записи. Узко под S&M, без миграции компании. Готова к подключению агентов на этапе 3.</p>
+        <p class="pain-source">Ефим · 36 часов</p>
       </div>
       <div class="pain-card">
         <span class="pain-tag">▸ Безопасность</span>
-        <p class="pain-quote"><strong>Вы:</strong> «Расскажите, что входит в аудит безопасности: изоляция, права доступа, хранение секретов, план обновлений».</p>
-        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> Перешли на самописные агенты в вашем контуре. Отдельный блок безопасности в этапе 3 с 4 пунктами, которые вы запросили.</p>
+        <p class="pain-quote"><strong style="color: var(--white);">Закрытый контур + VPN.</strong> Все 3 агента работают в изоляции от продакшн-систем. Корпоративный VPN, права доступа по принципу минимальных привилегий, шифрованное хранение секретов, план обновлений.</p>
+        <p class="pain-source">Документация на руках по окончании этапа 3</p>
       </div>
       <div class="pain-card">
-        <span class="pain-tag">▸ База знаний</span>
-        <p class="pain-quote"><strong>Вы:</strong> «SharePoint остаётся системой записи. Obsidian — как слой под агентов, а не миграция компании. Для пилота — узко под S&M».</p>
-        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> База знаний строится узко под S&M. SharePoint остаётся источником правды. Obsidian — только проекция для агентов.</p>
-      </div>
-      <div class="pain-card">
-        <span class="pain-tag">▸ Цена</span>
-        <p class="pain-quote"><strong>Контекст:</strong> объём сужается с компании до одного департамента — справедливо пересмотреть стоимость.</p>
-        <p class="pain-source"><strong style="color: var(--green);">✓ Сделали:</strong> Скорректировали $30 000 → <strong>$20 000</strong>. Срок 3 мес → 2,5 мес. Часы 250 → 185.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ============================ POINTS OF GROWTH ============================ -->
-<section class="section" id="growth">
-  <div class="container">
-    <div class="section-label">Точки роста</div>
-    <h2 class="section-title">Какие процессы <span class="green">Sales & Marketing</span><br>мы можем усилить искусственным интеллектом</h2>
-    <p class="section-sub">Зафиксировали ключевые сигналы со звонка. Фокус в пилоте — на болях S&M-вертикали, остальные точки роста — в следующих волнах.</p>
-
-    <div class="pain-grid">
-      <div class="pain-card">
-        <span class="pain-tag">▸ Стратегия</span>
-        <p class="pain-quote">«Всё происходит спонтанно. Нет системного и стратегического подхода. Куда мы дойдём — не видим».</p>
-        <p class="pain-source">Эльнур · CEO</p>
-      </div>
-      <div class="pain-card">
-        <span class="pain-tag">▸ Команда</span>
-        <p class="pain-quote">«Купили корпоративный Claude. Индусская команда даже кнопку „активировать" не нажала».</p>
-        <p class="pain-source">Эльнур · CEO</p>
-      </div>
-      <div class="pain-card">
-        <span class="pain-tag">▸ Клиенты</span>
-        <p class="pain-quote">«Уровень construction, какие трубы, какая плитка — отвечаем вручную по email и WhatsApp. А клиенты ждут современный формат».</p>
-        <p class="pain-source">Эльнур · CEO</p>
-      </div>
-      <div class="pain-card">
-        <span class="pain-tag">▸ Sales / BD</span>
-        <p class="pain-quote">«Ищу wealth funds, family offices в LinkedIn. Сидеть в Make/Render по 4 часа — убивает время и нервы».</p>
-        <p class="pain-source">Эльнур · CEO</p>
-      </div>
-      <div class="pain-card">
-        <span class="pain-tag">▸ Операционка</span>
-        <p class="pain-quote">«Подписание договора с брокером — 2 недели. По шагам всё ясно, можно сократить до 1 дня, но цена ошибки высокая».</p>
-        <p class="pain-source">Искандер · Sales / Marketing</p>
-      </div>
-      <div class="pain-card">
-        <span class="pain-tag">▸ Готовность</span>
-        <p class="pain-quote">«Мы там, где можно сделать — не наврядив каким-то процессам. Хирургически, не шашками».</p>
-        <p class="pain-source">Искандер · Sales / Marketing</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ============================ COMPANY MAP ============================ -->
-<section class="section" id="company">
-  <div class="container">
-    <div class="section-label">Контекст</div>
-    <h2 class="section-title">Карта компании <span class="green">CityView</span></h2>
-    <p class="section-sub">Наше понимание структуры, ИТ-стека и команды — от этого строим внедрение.</p>
-
-    <div class="company-map">
-      <div class="map-grid">
-        <div class="map-section">
-          <h4>Структура отделов</h4>
-          <ul class="map-list">
-            <li><strong>Sales / Marketing</strong> <span class="muted">— объединены под Искандером</span></li>
-            <li><strong>Operations</strong> <span class="muted">— GR, Customer Service, Collection, SPA</span></li>
-            <li><strong>Finance</strong> <span class="muted">— CFO русскоговорящий</span></li>
-            <li><strong>Construction</strong> <span class="muted">— отдельное юрлицо, общие сотрудники</span></li>
-            <li><strong>Brokers</strong> <span class="muted">— внешняя продажа недвижимости</span></li>
-          </ul>
-        </div>
-        <div class="map-section">
-          <h4>Языковая дистрибуция</h4>
-          <ul class="map-list">
-            <li><strong>5–6 человек</strong> <span class="muted">— русскоговорящие руководители</span></li>
-            <li><strong>1 человек</strong> <span class="muted">— русскоговорящий линейный персонал</span></li>
-            <li><strong>Остальная команда</strong> <span class="muted">— индусская и местная, нерусскоговорящая</span></li>
-            <li><strong>Все в одном офисе</strong> <span class="muted">— Дубай, удобно для визитов</span></li>
-          </ul>
-        </div>
-        <div class="map-section">
-          <h4>ИТ-стек</h4>
-          <ul class="map-list">
-            <li><strong>Битрикс24</strong> <span class="muted">— кастомизированный, доработка идёт</span></li>
-            <li><strong>SharePoint</strong> <span class="muted">— файловое хранилище</span></li>
-            <li><strong>Microsoft 365</strong> <span class="muted">— корпоративная почта</span></li>
-            <li><strong>Google Workspace</strong> <span class="muted">— Calendar, Drive</span></li>
-            <li><strong>WhatsApp + email</strong> <span class="muted">— внутренние коммуникации</span></li>
-          </ul>
-        </div>
-        <div class="map-section">
-          <h4>Что уже используется в ИИ</h4>
-          <ul class="map-list">
-            <li><strong>Claude Pro (corp)</strong> <span class="muted">— куплен, использует меньшинство</span></li>
-            <li><strong>Obsidian</strong> <span class="muted">— у Эльнура как «второй мозг»</span></li>
-            <li><strong>ChatGPT</strong> <span class="muted">— команда использует как Google</span></li>
-            <li><strong>Manus, Perplexity</strong> <span class="muted">— разовые эксперименты</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ============================ PRINCIPLES ============================ -->
-<section class="section" id="principles">
-  <div class="container">
-    <div class="section-label purple">Принципы внедрения</div>
-    <h2 class="section-title">Как мы будем работать <span class="purple">с вами</span></h2>
-    <p class="section-sub">Четыре принципа, согласованных по итогам обсуждения.</p>
-
-    <div class="principles-grid">
-      <div class="principle">
-        <div class="pnum">01</div>
-        <h4>Фрагментарный старт</h4>
-        <p>Не запускаем всё на компанию сразу. Берём один департамент — Sales & Marketing. По итогам — масштабируем на Operations и дальше. Меньше риск, быстрее результат.</p>
-      </div>
-      <div class="principle">
-        <div class="pnum">02</div>
-        <h4>Хирургически, не шашками</h4>
-        <p>Не сносим работающие процессы. Внедряем туда, где даёт результат и не создаёт риска. SharePoint остаётся системой записи, Obsidian — проекция под агентов.</p>
-      </div>
-      <div class="principle">
-        <div class="pnum">03</div>
-        <h4>Параллельные потоки</h4>
-        <p>Аудит S&M-процессов и быстрые победы — одновременно. Не ждём окончания одного, чтобы начать другое. За 2,5 месяца — четыре потока работ параллельно.</p>
-      </div>
-      <div class="principle">
-        <div class="pnum">04</div>
-        <h4>От руководства к команде</h4>
-        <p>Сначала ликбез для руководящего состава S&M. Они становятся локомотивом. Потом — расширение на остальной отдел и масштабирование на другие департаменты.</p>
+        <span class="pain-tag">▸ Финал и план волны 2</span>
+        <p class="pain-quote"><strong style="color: var(--white);">Демо S&M-пилота</strong> + расширение программы. Какие агенты следующими (Construction, Finance), какая экономика, какой срок. Согласованный план волны 2.</p>
+        <p class="pain-source">Финальная стратсессия в Дубае · неделя 10</p>
       </div>
     </div>
   </div>
@@ -1286,8 +1163,8 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 <section class="section" id="roadmap">
   <div class="container">
     <div class="section-label">Дорожная карта</div>
-    <h2 class="section-title">5 этапов · 2,5 месяца · <span class="green">185 часов</span> работы</h2>
-    <p class="section-sub">Пилотный этап охватывает Sales & Marketing. Каждый этап даёт измеримый результат и открывает следующий. По итогам — масштабирование на Operations.</p>
+    <h2 class="section-title">5 этапов · 2,5 месяца · <span class="green">185 часов</span> обучения · <span class="green">3 агента</span> под ключ</h2>
+    <p class="section-sub">Обучение охватывает три отдела (S&M, Construction, Finance). Внедрение агентов — только в Sales & Marketing. По итогам пилота — план волны 2.</p>
 
     <!-- STAGE 0 -->
     <div class="stage-block">
@@ -1297,23 +1174,23 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
           <div class="stage-meta">
             <span class="mtag">⏱ 34 часа</span>
             <span class="mtag">📅 Недели 1–3</span>
-            <span class="mtag green">Выездная стратсессия в Дубай</span>
+            <span class="mtag green">Стратсессия в Дубае</span>
           </div>
-          <div class="stage-title">Аудит Sales & Marketing</div>
-          <p class="stage-desc">Глубокое погружение в процессы S&M-вертикали. Не консалтинг — аудит: фиксируем как работает сейчас, где можно усилить ИИ, где нельзя трогать. Финал — отчёт с приоритетами под пилот.</p>
+          <div class="stage-title">Аудит и анкетирование</div>
+          <p class="stage-desc">Погружение в процессы трёх отделов: Sales & Marketing, Construction, Finance. Без этого нельзя сделать детальную программу обучения и точный план внедрения. По итогам — финальная программа и дорожная карта.</p>
         </div>
       </div>
 
       <div class="stage-grid">
-        <div class="si">Выездная стратсессия в Дубай — личное участие наших экспертов в офисе CityView в отдельных случаях</div>
-        <div class="si">Интервью с руководителями S&M (Искандер + ключевые сотрудники)</div>
-        <div class="si">Аудит процессов отдела: воронка, контент, работа с брокерами, поиск инвесторов</div>
-        <div class="si">Анализ ИТ-стека под S&M (Битрикс24, SharePoint, что использует команда)</div>
-        <div class="si">Фиксация какие процессы готовы к ИИ-агентам, какие — нет</div>
-        <div class="si">Сводный отчёт по аудиту + презентация результатов</div>
+        <div class="si">Установочная стратсессия в Дубай — личное присутствие наших экспертов в офисе</div>
+        <div class="si">Интервью с Эльнуром (CEO), Искандером (S&M), Сергеем (Construction), Рамизом (Finance)</div>
+        <div class="si">Анкетирование команд трёх отделов — фиксация уровня владения ИИ</div>
+        <div class="si">Аудит процессов каждого отдела: что готово к ИИ, где риски, где быстрые победы</div>
+        <div class="si">Аудит ИТ-стека (Битрикс24, SharePoint, текущие практики работы)</div>
+        <div class="si">Финал: детальная программа обучения + план внедрения в Sales & Marketing</div>
       </div>
 
-      <div class="result-box"><strong>✓ Результат:</strong> Зафиксированная карта S&M-процессов, приоритезированный список точек внедрения, согласованный план этапов 1–4 под пилот.</div>
+      <div class="result-box"><strong>✓ Результат:</strong> Зафиксированная карта процессов трёх отделов. Детальная таблица программы обучения. Точный план внедрения агентов в Sales & Marketing с приоритетами.</div>
 
       <div class="stage-hours">
         <span class="hour-chip"><span class="name">Стас</span> <span class="h">8 ч</span></span>
@@ -1330,25 +1207,39 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
           <div class="stage-meta">
             <span class="mtag">⏱ 32 часа</span>
             <span class="mtag">📅 Недели 3–6</span>
-            <span class="mtag purple">5 групповых + 1 индивидуальная</span>
+            <span class="mtag purple">3 отдела: S&M, Construction, Finance</span>
           </div>
-          <div class="stage-title">Ликбез для руководства S&M</div>
-          <p class="stage-desc">Руководящий состав Sales & Marketing выходит на профессиональный уровень работы с ИИ. Не «как Google» — а инструмент стратегического уровня под их задачи.</p>
+          <div class="stage-title">Корпоративное обучение руководителей</div>
+          <p class="stage-desc">Руководители трёх отделов выходят на профессиональный уровень работы с ИИ. Не «как Google» — а инструмент стратегического уровня. Программа формируется по итогам аудита и анкетирования (первые 3 недели).</p>
         </div>
       </div>
 
       <div class="stage-grid">
-        <div class="si">Сессия 1: Карта ИИ-инструментов + настройка Claude Projects под S&M</div>
-        <div class="si">Сессия 2: Промпт-инжиниринг под продажи и маркетинг недвижимости</div>
-        <div class="si">Сессия 3: Deep Research для рынка недвижимости Дубая</div>
-        <div class="si">Сессия 4: Безопасность данных + регламент работы с ИИ</div>
-        <div class="si">Сессия 5: Введение в концепцию ИИ-агентов (вход в этап 3)</div>
-        <div class="si">Индивидуальная сессия с Искандером: контент-стратегия + агенты</div>
-        <div class="si">Чат-поддержка между сессиями</div>
-        <div class="si">Библиотека из 10+ промптов под задачи S&M</div>
+        <div class="si">Сессия 1 (общая): Карта ИИ-инструментов + настройка Claude Projects</div>
+        <div class="si">Сессия 2 (общая): Базовое мышление через призму ИИ</div>
+        <div class="si">Сессия 3 (общая): Красные и зелёные зоны — что можно загружать в ИИ</div>
+        <div class="si">Сессии 4–5 (по отделам): практика на реальных задачах каждого отдела</div>
+        <div class="si">Индивидуальные брифинги с каждым руководителем + чат-поддержка</div>
+        <div class="si">Библиотека из 10+ промптов под задачи каждого отдела</div>
       </div>
 
-      <div class="result-box"><strong>✓ Результат:</strong> Руководители S&M работают с ИИ профессионально. Готовая библиотека промптов под их роли. Регламент безопасности при работе с данными клиентов.</div>
+      <div class="result-box"><strong>✓ Результат:</strong> Руководители трёх отделов работают с ИИ профессионально. Понимают что можно автоматизировать в их зоне. Готовая библиотека промптов. Регламент безопасности при работе с данными.</div>
+
+      <div style="background: rgba(167,139,250,0.07); border: 1px solid rgba(167,139,250,0.25); border-radius: 14px; padding: 22px 24px; margin-top: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+          <span style="font-size: 16px;">📋</span>
+          <strong style="color: var(--purple); font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Программа обучения · детальная таблица</strong>
+        </div>
+        <p style="font-size: 13.5px; color: var(--gray); line-height: 1.6; margin-bottom: 16px;">
+          Состав уроков, темы и материалы по каждому семинару. Структура утверждена, наполнение конкретными темами и материалами уточняется в первые 3 недели после анкетирования руководителей.
+        </p>
+        <a href="https://docs.google.com/spreadsheets/d/1qkKW1VPz_BRq6c96A623lEqcZLlJTKBBDispiwmGuVg/edit?gid=1411913149#gid=1411913149" target="_blank" rel="noopener" style="display: block; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); transition: all 0.2s; text-decoration: none;">
+          <img src="data:image/jpeg;base64,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sjspyLccwSE6Rg0nWtwa/Ki632c38t1RultUJTJpRWU6maYNAtSlutawAa0ui4KjBAFsPh1A4rOlGNAuqlQGGbzu+IQMagGi3IlFgDeEkQ1TfCHoUgYA/KtdYPBDyTm/Ee5Ptr+EQFkWoKN8+JmRsHPH+5vRUzOPz+4ScwNWAyA7PUTECAQBJfVX1hhHAJHXq+//AKnlDJAEABDAETynlPKef9v/APympXgzynlPKeX7o/8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AOYwFYFAjfmpn4LJI0ItAr1iFxm+obfaCFmDALJwH1UDMek69P7hciKBE0UjgTdzIDSSqLLY1qFsuABlyyDp8QhIvKeTXfEusNTa18f/AJeOIZ//2gAMAwEAAgADAAAAEA6Ioi1jxtyX2ty6w1wwxuqjqo6Qwwwwww0x2pmjot/Awwwwww6Y9uv2oo2t0s0/zf8A33333333333/AN99999999999999999999/99999999999999999999999999zMMMMMMMMMMMMMMMMMMMMMMMMMMsogQQQUYW8sMMMMMMMMMMMMMMMMMMMMMMMMM8nKmO/8A/wD/AP8Ahiuggrs//wCu8MucpbP8cJP/APvSOXO7TX//AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD+888888888PPPffPvfP8A/NsOPutPuuMvtPONvMONOssPsuttsPPNPPPPPPPPPPPPfPPPPPPPPPPPPPPPPPPOH3ipT6/JryliI/EqpFvuttvLlvvPPPP/ADzzzzzzzzzz3zzzzzzzzzzzzzzzzzzyxo8O6MYIR6xa73y64x6w74y74w67zzzzzzzzzzzzzzz3zzzzzzzzzzzzzzzzzzyz69765647zzzzzx0/4z464+757zzzzzzzzzzzzzzzzz0E3O0EEEEG20kEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE/LLr7//AP8A/wDbr7r7brb7v/fvffrPbvfPfPf/AP23z/3zyzz/APs8s/8A/wD/AP8A/wD/AP8A/wD/AP8A8wzwzzzzzy464wy7x5zyjCYij5jYoSJ7gzQqEpyyz54wyz7yy7zzzzzzzzzzzzz3zzzzzzzzzzzzzzzzzzyy7425z6647x4557zzzzzzzzzzzzzzzzzzzzzzzzzzzz3zzzzzzzzzzzzzzzzzzyx7w6ryjq84Rzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz3zzzzzzzzzzzzzzzzzzzwfhC65j446abKTzzzzzzzzzzzzzzzzzzzzzzzzzzzzz0IIIIIIIIIIIIIIIIIIIIIIIIIIY844444444IIIIIIIIIIIIIIIIIIIIIIIIIL4wwwwwwwwwwwwwwwwwwwwwwwwwypBJgwB7wRCwwwwwwwwwwwwwwwwwwwwwwwwwzwPMuMwwwwyU+dv/Osc8xg8p9H4Tvut8Ywxz+c8PhtOrtHXYGOwwwwwwwwwwwwwwzzzzzzzzzzzzzzzzzzzygaC4oNIc7XI7zyy6w57zzzzzzzzzzzzzzzzzzzzzzzz3zzzzzzzzzzzzzzzzzzzy567zw77zzzzzyw5466665w4x977zzzzzzzzzzzzzzz3zzzzzzzzzzzzzzzzzzziefDcN/PfmKlqrzzzzzzzzzzzzzzzzzzzzzzzzzzzzz3zzzzzzzzzzzzzzzzzzzw47yg57xxxzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz3zzzzzzzzzzzzzzzzzzzif5778546w445w7zzzzzzzzzzzzzzzzzzzzzzzzzzzz3PP/ALzzzzz7/wD888888884888888888888888888888888888888888888888888gEFOAAAAAALDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAP//EACYRAAMAAgEDBAMAAwAAAAAAAAABERAhQDAxYSBQUfBBkeFgcYH/2gAIAQMBAT8QF1E+6/on91B/jX39lghXUaxt3b7+yBpoVu2ZEltG4eEbTiynHRvQZWlv+njF9n+hGdWkfRV9hz7G6wUNoVfhhR7L78jN29BDsovyL7+zwH5aH8X35FHhl+VCt9fP8NRzR8D7+zwjacHa/dIIqCqqqqKqqoqqqqqq6YAqKjl9hXPbKXyUrKysrKy+S+S+RvyXyf8AS+SsrKxMpS+SspfJWUpfJSsrKyl8lZSspWVlZWVlZWVlZWVlZWVlZWVlZWVlZWJvpJlKUpSlLhEIQhCEJiE9E3CEJmEIQhCcBcWrGsaNZ1jRrh3qLiLEJiLpUpcUuaXFLwFxaUpSlL0KUpSlKUonw0REREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREOMK+g+rKXCsrLg4NvawAEAAf8A9V7Jr1XiriIpSlKUpcUpS85cRYubil9jXF1jWNY1nRo1z1xQAACCMIyQQRhBHvoAAAABexN/BSovqTRo0VGioqKNrCZcX03F6VzS5vAXEXpmJiDXppeWuLS4uL0aUpS4pSlLi8BcRZ16tY0a564tLilzS+xLiLvilKUpSlKUpeciiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiihJ/5/8A/8QAIxEBAQEAAAYCAgMAAAAAAAAAEQABECAhMEBBUHAxYICRsf/aAAgBAgEBPxC/L+v8nJycnJycnLpOTk5YTk5dORy0nJycunZ6XScZycnJy07GdJycnJyw9zl0nJy6Tk5xSb86AAAIAAAAAJg8v3x3h6+Bzwnvvw75p+17+fq1mZntvO8rwZni8zwZ4MzMzMzMzM/q79D+vPIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIjzN3k9fA54GfxDfuP/8QAKxABAQACAgICAQMDBQEBAAAAAREAITFhQVFxkYEQUKEgscEwQGDw8dHh/9oACAEBAAE/EP035dTVZufODoATMqmm6l1lOGNESwu04nl84uiNTTrlN8cnjEuHuBJQtV9XGAKDpZQjOPjErFZFEGy2zz4cVAriQWSeAuvi4O7gtgDp0vPw4UEQUeIAqETbgMFibosjNXDjkQV+A1yj1iEd1/F4brh3jNiaEmRuqCUkcOErogljOdeSbzw44BJQXbeesdbIhTYdJ42Rx7rdrjb2bO/jDtpDHMKbMUQ85BtjvBFDVfT85vSz2QPPY6AHyzDd2XyqwfAhzhRsKdqDnQUuEyIzE1S6DXLhtstAB0DZb9YokCgKnfgGtOHeXemgPxKvc94z+nZy6iGCcqYoCXy72UNDt59Z4EteskE9Qi+0wyT+XMSmuHXOOWM59VV6UWek/qa0BSFg543hSK4IVXJV+MYR6/3YtlNB3dYA2ojM8LxOcXCE83mxjuAhKILThs3JMs4stIazzThNZQCG5JBPgs+RyGrD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dbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51udbnW51fz+u/zRxJG7WnEgWt6Q26OE4gcYmAGAClHslQvzzgCoBSClI3FAgG5izTTfZpdr/f/AFBcIdTkpMKUnQ0LB75wYhF9bDfZ8L54d4KGVOUUHe+mWyCwIqt6BXqZ7VKk0l59nX5/5K5TKZTNZrNZrKZTKZTKZTKZTKZTKZTKZTNZrNZTKZTKZTKZTKe8plMplMplMplMplMplMplMplMplPeUymUymUymUymUymUymUynvKZTKZTKZTKZTKZTKZTKZTKZTKZTKZT3lMplMplMplMplMplMplPeUymUymUymUymUymUymUymUymUymUymUymUymUymUy4vMXSZBbo2nXFxlFaWFHQ7hGOy5SjV2RhZuC+MeXCsvGhYJuqKgc5D2dRHQD0qb1B9YSZZEgIq8aUDnS8ZV5jYYxGLvcaVJjJIsjZhDbROp/p3GnNbPGsv6E3SBEeQcd4zawTNAQbC6U39ZfmQT6ZBbIfz043JssDS4vKwhs2sN420fBiqIimo3eZmpC1IH8QiU8CyfNTQ6ovAoByr85EERoxu+Jyrqd4zuFIE6Kuic154K6ylViAzJ5hVov98EMECSs1vgeHCil0UhBHCj38PG8UN5oCVKzQfT1hlFhgYAtFR112ZBAYnthMJSvOphylAYajRthP54zXQbjUO65m/VxmjcFiQ3gtI+sOFMrJBQ6/QmE0CgbTSbmb5ERr2XRXTB9XAlLYmhBwW8evxgOHwVyHDjE6xCU0+HOFRGeuNq47djrnXtDKoOytEU/DrjI88yAUQdLL7Os5qZLdFUeLwPUuKOALqXR8NS/4yUAQwYKjXAefmZYwRAFlv2OP04pNjnSQCOyKuJRdNEVMro47eMlV3Rbik71x/OFscGDwEQ2aeuM2QStCFb3yMdmKkOEQoyzl2OuT51jcsgBaIDAvnxfGaswqvqQg874a4wWdDjdX+8b8b8OXyIi3HBOduF/j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" alt="Превью таблицы программы обучения" style="display: block; width: 100%; height: auto;">
+        </a>
+        <a href="https://docs.google.com/spreadsheets/d/1qkKW1VPz_BRq6c96A623lEqcZLlJTKBBDispiwmGuVg/edit?gid=1411913149#gid=1411913149" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 10px 18px; background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.3); border-radius: 100px; color: var(--purple); font-family: 'JetBrains Mono', monospace; font-size: 12px; text-decoration: none; letter-spacing: 0.02em; transition: all 0.2s;">
+          📄 Открыть полную таблицу программы →
+        </a>
+      </div>
 
       <div class="stage-hours">
         <span class="hour-chip"><span class="name">Стас</span> <span class="h">22 ч</span></span>
@@ -1433,6 +1324,28 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
         </div>
       </div>
 
+      <div class="subhead">▸ Процесс работы</div>
+      <div class="process-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 8px;">
+        <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--purple); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">📚 База знаний — перед агентами</div>
+          <div style="font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.55;">
+            ▸ На этапе аудита — проработка структуры и порядка обновления базы<br>
+            ▸ Реализация структур базы знаний<br>
+            ▸ Реализация механизма обновления базы
+          </div>
+        </div>
+        <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--purple); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">🛠 Road map по каждому агенту</div>
+          <div style="font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.55;">
+            ▸ На завершении аудита — полное понимание работы агента<br>
+            ▸ Готовим use-кейсы с реальными примерами, согласовываем с вами<br>
+            ▸ Реализация агента → внутреннее тестирование<br>
+            ▸ Пользовательское тестирование (UAT)<br>
+            ▸ Внедрение в команду
+          </div>
+        </div>
+      </div>
+
       <div class="subhead">▸ Три агента в пилот</div>
       <div class="agents-grid">
         <div class="agent-card">
@@ -1455,13 +1368,15 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
         </div>
       </div>
 
-      <div class="subhead">▸ Безопасность — отдельный блок</div>
-      <p style="font-size: 14px; color: var(--gray); margin-bottom: 14px; line-height: 1.6;">По вашему запросу — что входит в аудит безопасности агентов. Все четыре пункта прорабатываем явно и фиксируем в документации.</p>
+      <div class="subhead">▸ Безопасность — закрытый контур</div>
+      <p style="font-size: 14px; color: var(--gray); margin-bottom: 14px; line-height: 1.6;">Один из ключевых требований Эльнура — конфиденциальность данных. Все агенты работают в закрытом контуре через корпоративный VPN. Никакого внешнего трафика, никаких прослушек.</p>
       <div class="stage-grid">
+        <div class="si"><strong style="color: var(--white);">Корпоративный VPN:</strong> весь трафик агентов идёт через защищённый туннель, без утечек данных</div>
         <div class="si"><strong style="color: var(--white);">Изоляция:</strong> агенты в отдельной сетевой зоне, изолированы от продакшн-систем CityView</div>
         <div class="si"><strong style="color: var(--white);">Права доступа:</strong> принцип минимальных привилегий, только нужные API-доступы под каждого агента</div>
         <div class="si"><strong style="color: var(--white);">Хранение секретов:</strong> ключи в шифрованном хранилище, не в коде, ротация по графику</div>
         <div class="si"><strong style="color: var(--white);">План обновлений:</strong> регламент patch-management, мониторинг уязвимостей зависимостей</div>
+        <div class="si"><strong style="color: var(--white);">Песочница для каждого агента:</strong> даже при промпт-инъекции — выход из песочницы невозможен</div>
       </div>
 
       <div class="subhead">▸ Передача управления вам</div>
@@ -1472,7 +1387,12 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
         <div class="si">По агенту B — демонстрация результатов и согласование roadmap для продакшн-фазы</div>
       </div>
 
-      <div class="result-box"><strong>✓ Результат:</strong> Два рабочих агента в продакшне (A и D), один research-прототип с понятным механизмом (B). Весь код в вашем контуре. Документация на руках. Полная безопасность по 4 запрошенным пунктам.</div>
+      <div style="background: rgba(167,139,250,0.07); border: 1px dashed rgba(167,139,250,0.3); border-radius: 12px; padding: 14px 18px; margin-top: 14px; font-size: 13px; color: var(--gray); line-height: 1.55;">
+        <strong style="color: var(--purple);">🛠 Детальная дорожная карта внедрения</strong><br>
+        Пошаговый план разработки и развёртывания агентов A, B и D — готовит Ефим Герасимов. <span style="color: var(--gray2);">Документ будет добавлен в финальную версию оффера, до старта аудита.</span>
+      </div>
+
+      <div class="result-box"><strong>✓ Результат:</strong> Два рабочих агента в продакшне (A и D), один research-прототип (B). Весь код в вашем контуре. Документация на руках. Закрытый контур безопасности.</div>
 
       <div class="stage-hours">
         <span class="hour-chip"><span class="name">Стас</span> <span class="h">20 ч</span></span>
@@ -1489,85 +1409,29 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
           <div class="stage-meta">
             <span class="mtag">⏱ 12 часов</span>
             <span class="mtag">📅 Неделя 10</span>
-            <span class="mtag green">Финал + волна 2 (Operations)</span>
+            <span class="mtag green">Финал + следующие волны</span>
           </div>
-          <div class="stage-title">Демо S&M-пилота и план волны 2</div>
-          <p class="stage-desc">Закрываем S&M-пилот. Показываем результаты. Готовим план расширения на Operations — там процессов больше и они менее формализованы, поэтому отдельный аудит и отдельный этап.</p>
+          <div class="stage-title">Демо результатов и план волны 2</div>
+          <p class="stage-desc">Закрываем S&M-пилот. Показываем работу 3 агентов. Готовим план расширения: какие агенты следующими, куда заходим — Construction или Finance в первую очередь.</p>
         </div>
       </div>
 
       <div class="stage-grid">
         <div class="si">Финальная стратсессия в Дубае с командой CityView</div>
-        <div class="si">Демо результатов S&M-пилота — агенты A и D в работе</div>
-        <div class="si">Презентация результатов research-фазы по агенту B</div>
-        <div class="si">План волны 2 — расширение на Operations и Customer Service</div>
-        <div class="si">Предварительная оценка скоупа для агента C (клиенты в стройке)</div>
-        <div class="si">Q&A — ответы на все вопросы команды</div>
+        <div class="si">Демо результатов S&M-пилота: агенты A и D в продакшн, B — research</div>
+        <div class="si">Презентация результатов обучения по трём отделам</div>
+        <div class="si">План волны 2: приоритезация агентов для Construction и Finance</div>
+        <div class="si">Кандидаты на следующих агентов из звонков с Сергеем и Рамизом (статус-апдейты по стройке, контроль материалов, агент-юрист с базой IFRS)</div>
+        <div class="si">Экономика и сроки следующего этапа</div>
       </div>
 
-      <div class="result-box"><strong>✓ Результат:</strong> Закрытый S&M-пилот с измеримым результатом. Согласованный план волны 2. Понятная экономика расширения. Команда CityView подготовлена к следующему этапу.</div>
+      <div class="result-box"><strong>✓ Результат:</strong> Закрытый S&M-пилот с измеримым результатом. Согласованный план волны 2 с приоритезацией под Construction и Finance.</div>
 
       <div class="stage-hours">
         <span class="hour-chip"><span class="name">Стас</span> <span class="h">4 ч</span></span>
         <span class="hour-chip"><span class="name">Роман</span> <span class="h">5 ч</span></span>
         <span class="hour-chip"><span class="name">Ефим</span> <span class="h">3 ч</span></span>
       </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ============================ HOURS TABLE ============================ -->
-<section class="section" id="hours">
-  <div class="container">
-    <div class="section-label">Прозрачность ресурсов</div>
-    <h2 class="section-title">Распределение <span class="green">185 часов</span> по экспертам</h2>
-    <p class="section-sub">Показываем точно, сколько часов и на каком этапе работает каждый эксперт. Без скрытых ресурсов.</p>
-
-    <div class="hours-table-wrap">
-      <table class="hours-table">
-        <thead>
-          <tr>
-            <th>Этап</th>
-            <th>Стас</th>
-            <th>Роман</th>
-            <th>Ефим</th>
-            <th>Итого</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="row-stage-0">
-            <td><strong>0</strong>Аудит Sales & Marketing</td>
-            <td>8</td><td>14</td><td>12</td><td>34</td>
-          </tr>
-          <tr class="row-stage-1">
-            <td><strong>1</strong>Ликбез руководства S&M</td>
-            <td>22</td><td>4</td><td>6</td><td>32</td>
-          </tr>
-          <tr class="row-stage-2">
-            <td><strong>2</strong>База знаний под S&M</td>
-            <td>8</td><td>6</td><td>22</td><td>36</td>
-          </tr>
-          <tr class="row-stage-3">
-            <td><strong>3</strong>3 ИИ-агента в вашем контуре</td>
-            <td>20</td><td>10</td><td>41</td><td>71</td>
-          </tr>
-          <tr class="row-stage-4">
-            <td><strong>4</strong>Финал + план волны 2</td>
-            <td>4</td><td>5</td><td>3</td><td>12</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td>Итого по эксперту</td>
-            <td>62 ч</td>
-            <td>39 ч</td>
-            <td>84 ч</td>
-            <td>185 ч</td>
-          </tr>
-        </tfoot>
-      </table>
     </div>
   </div>
 </section>
@@ -1586,22 +1450,19 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
         <div class="team-avatar">СП</div>
         <div class="team-name">Станислав Панков</div>
         <div class="team-role">Методология · Продукт</div>
-        <p class="team-bio">Отвечает за программу ликбеза, промпт-инжиниринг, безопасность данных, разработку агентов B и D. Дипломированный педагог, 4+ года в EdTech.</p>
-        <div class="team-hours">⏱ 62 часа на проекте</div>
+        <p class="team-bio">Отвечает за программу обучения трёх отделов, промпт-инжиниринг, безопасность данных, разработку агентов B и D. Дипломированный педагог, 4+ года в EdTech.</p>
       </div>
       <div class="team-card">
         <div class="team-avatar">РП</div>
         <div class="team-name">Роман Пищулов</div>
         <div class="team-role">Архитектура · Стратегия</div>
-        <p class="team-bio">Отвечает за концепцию агентной системы, защиту дорожной карты, план волны 2. IT-предприниматель, CEO SETUP, практик с AI-агентами.</p>
-        <div class="team-hours">⏱ 39 часов на проекте</div>
+        <p class="team-bio">Отвечает за концепцию агентной системы, защиту дорожной карты, план волны 2. <span class="hi">Участвует в выездах в Дубай</span> на стратсессиях. IT-предприниматель, CEO SETUP, практик с AI-агентами.</p>
       </div>
       <div class="team-card">
         <div class="team-avatar">ЕГ</div>
         <div class="team-name">Ефим Герасимов</div>
         <div class="team-role">Внедрение · Дубай</div>
         <p class="team-bio">Отвечает за разработку агентов, базу знаний, интеграции. <span class="hi">Физически в Дубае</span> — выезжает в офис для стратсессий и работы на месте.</p>
-        <div class="team-hours">⏱ 84 часа на проекте</div>
       </div>
     </div>
   </div>
@@ -1620,32 +1481,32 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-week">Недели 1–3</div>
-        <div class="tl-title">Аудит Sales & Marketing</div>
-        <div class="tl-desc">Все три эксперта запускают проект. Роман ведёт интервью с руководителями S&M, Ефим разбирается с ИТ-стеком, Стас готовит ликбез. Финал — отчёт по аудиту S&M-вертикали.</div>
+        <div class="tl-title">Аудит и анкетирование трёх отделов</div>
+        <div class="tl-desc">Стратсессия в Дубае. Роман ведёт интервью с Искандером, Сергеем, Рамизом. Ефим разбирается с ИТ-стеком. Стас готовит детальную программу обучения по итогам анкет.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-week">Недели 3–6</div>
-        <div class="tl-title">Ликбез руководства S&M</div>
-        <div class="tl-desc">Стас ведёт сессии. Параллельно Ефим начинает строить базу знаний. Роман — на ключевой сессии «Введение в агенты», она же запуск этапа 3.</div>
+        <div class="tl-title">Обучение S&M, Construction, Finance</div>
+        <div class="tl-desc">Стас ведёт сессии. 3 общие сессии + углублённые блоки по каждому отделу. Параллельно Ефим начинает строить базу знаний под S&M.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-week">Недели 4–7</div>
-        <div class="tl-title">База знаний под S&M</div>
-        <div class="tl-desc">Ефим в Дубае физически. Стас работает над архитектурой и регламентом. Роман прорабатывает S&M-процессы с командой.</div>
+        <div class="tl-title">База знаний под S&M-агентов</div>
+        <div class="tl-desc">Ефим в Дубае физически. Стас работает над архитектурой и регламентом. Роман прорабатывает S&M-процессы с командой Искандера.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-week">Недели 5–9</div>
-        <div class="tl-title">3 ИИ-агента в вашем контуре</div>
-        <div class="tl-desc">Пик работы Ефима — разработка агентов A и B, развёртывание на вашем сервере. Стас делает агента D и поддерживает по безопасности. Роман курирует архитектуру и подход.</div>
+        <div class="tl-title">3 ИИ-агента в Sales & Marketing</div>
+        <div class="tl-desc">Разработка агентов A, B, D. Развёртывание в закрытом контуре с VPN. Стас и Ефим работают параллельно, Роман курирует архитектуру.</div>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-week">Неделя 10</div>
         <div class="tl-title">Финал и план волны 2</div>
-        <div class="tl-desc">Все три эксперта снова в Дубае. Демо S&M-пилота. Защита плана расширения на Operations. Согласование экономики следующего этапа.</div>
+        <div class="tl-desc">Все три эксперта в Дубае. Демо агентов. Защита плана расширения на Construction и Finance. Согласование экономики следующего этапа.</div>
       </div>
     </div>
   </div>
@@ -1656,57 +1517,20 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 <!-- ============================ OUTCOMES ============================ -->
 <section class="section" id="outcomes">
   <div class="container">
-    <div class="section-label">Что остаётся у CityView</div>
-    <h2 class="section-title">Результаты <span class="green">S&M-пилота</span></h2>
-    <p class="section-sub">Не теория. Работающая инфраструктура, которая останется у вас после программы. Полностью в вашем контуре.</p>
+    <div class="section-label">Финальный результат</div>
+    <h2 class="section-title">Что <span class="green">получает</span> CityView</h2>
+    <p class="section-sub">Конкретные артефакты, которые останутся после 2,5 месяцев работы.</p>
 
     <div class="outcomes-grid">
-      <div class="oc"><span class="icon">🏗</span><h4>Агент A · продакшн</h4><p>Помощник по проектам. Знает статусы, материалы, документы. Отвечает в Telegram сотрудникам S&M и брокерам.</p></div>
-      <div class="oc"><span class="icon">🎙</span><h4>Агент D · продакшн</h4><p>Секретарь встреч. Транскрибирует звонки, делает саммари, обновляет Битрикс24 автоматически.</p></div>
-      <div class="oc"><span class="icon">🎯</span><h4>Агент B · research</h4><p>Полуагентская система разведки инвесторов по открытым источникам. Прозрачный механизм, понятный потолок.</p></div>
-      <div class="oc"><span class="icon">📚</span><h4>База знаний под S&M</h4><p>Слой Obsidian под агентов. SharePoint остаётся источником правды. Расширяется на другие отделы.</p></div>
-      <div class="oc"><span class="icon">🎓</span><h4>Прокачанное руководство S&M</h4><p>Искандер и команда работают с ИИ профессионально. Готовая библиотека из 10+ промптов под их задачи.</p></div>
-      <div class="oc"><span class="icon">🔒</span><h4>Регламент безопасности</h4><p>4 пункта: изоляция, права доступа, хранение секретов, план обновлений. Документация на руках.</p></div>
-      <div class="oc"><span class="icon">💻</span><h4>Код агентов в вашем контуре</h4><p>Весь исходный код у вас. Никакого вендор-лока. Можете дорабатывать сами или с любым подрядчиком.</p></div>
-      <div class="oc"><span class="icon">📋</span><h4>Документация на каждого агента</h4><p>Что делает, как работает, как менять. Команда CityView может поддерживать и развивать.</p></div>
-      <div class="oc"><span class="icon">🗺</span><h4>План волны 2 — Operations</h4><p>Согласованный план расширения на Operations и Customer Service. Понятная экономика следующего этапа.</p></div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ============================ FORMAT ============================ -->
-<section class="section" id="format">
-  <div class="container">
-    <div class="section-label purple">Формат работы</div>
-    <h2 class="section-title">Как мы <span class="purple">взаимодействуем</span></h2>
-
-    <div class="format-list">
-      <div class="fi">
-        <span class="ficon">📍</span>
-        <div class="ftext"><strong>Физическое присутствие в Дубае</strong><span>Ефим в Дубае постоянно — установка сервера и регулярная работа на месте. Стас и Роман — выездные стратсессии (открытие, ключевые точки, финал).</span></div>
-      </div>
-      <div class="fi">
-        <span class="ficon">🎥</span>
-        <div class="ftext"><strong>Все сессии записываются</strong><span>Команда может пересматривать материалы. У вас остаётся библиотека контента после программы.</span></div>
-      </div>
-      <div class="fi">
-        <span class="ficon">💬</span>
-        <div class="ftext"><strong>Чат с экспертами между модулями</strong><span>Можно задать вопрос по конкретной рабочей задаче и получить ответ от профильного эксперта.</span></div>
-      </div>
-      <div class="fi">
-        <span class="ficon">🎯</span>
-        <div class="ftext"><strong>100% работа на ваших задачах</strong><span>Все упражнения и тесты — на реальных материалах CityView. Никаких абстрактных примеров.</span></div>
-      </div>
-      <div class="fi">
-        <span class="ficon">🔒</span>
-        <div class="ftext"><strong>NDA и конфиденциальность</strong><span>Подписываем NDA на старте. Данные клиентов, проектов и финансов остаются внутри.</span></div>
-      </div>
-      <div class="fi">
-        <span class="ficon">📅</span>
-        <div class="ftext"><strong>Гибкое расписание</strong><span>Договариваемся о времени сессий под рабочий график команды. Учитываем разницу часовых поясов.</span></div>
-      </div>
+      <div class="oc"><span class="icon">🎓</span><h4>Обученные руководители 3 отделов</h4><p>S&M, Construction, Finance — каждый руководитель умеет пользоваться ИИ под свою специфику. Минимум один сотрудник в каждом отделе может быть заменён агентом.</p></div>
+      <div class="oc"><span class="icon">🏗</span><h4>Агент A в продакшне</h4><p>Помощник по проектам в S&M. Отвечает в Telegram сотрудникам и брокерам про статусы, материалы, документы. Подключён к базе знаний.</p></div>
+      <div class="oc"><span class="icon">🎙</span><h4>Агент D в продакшне</h4><p>Секретарь встреч. Транскрибирует звонки и встречи, делает саммари с next steps, обновляет карточки в Битрикс24 автоматически.</p></div>
+      <div class="oc"><span class="icon">🎯</span><h4>Агент B (research)</h4><p>Полуагентская система разведки инвесторов по открытым источникам. Прозрачный механизм, понятный потолок, roadmap до продакшна.</p></div>
+      <div class="oc"><span class="icon">📚</span><h4>База знаний под S&M</h4><p>Слой Obsidian под агентов + регламент наполнения. SharePoint остаётся источником правды. Команда умеет поддерживать.</p></div>
+      <div class="oc"><span class="icon">🔒</span><h4>Закрытый контур + VPN</h4><p>Корпоративный VPN, изоляция агентов, права доступа, шифрованные секреты, песочница. Документация безопасности на руках.</p></div>
+      <div class="oc"><span class="icon">💻</span><h4>Код в вашем контуре</h4><p>Весь исходный код агентов у вас. Никакого вендор-лока. Можете дорабатывать сами или с любым подрядчиком.</p></div>
+      <div class="oc"><span class="icon">📋</span><h4>Детальная таблица программы обучения</h4><p>Состав уроков, темы, материалы — формируется по итогам аудита и анкетирования в первые 3 недели работы.</p></div>
+      <div class="oc"><span class="icon">🗺</span><h4>План волны 2</h4><p>Приоритезация следующих агентов под Construction и Finance. Экономика и сроки следующего этапа.</p></div>
     </div>
   </div>
 </section>
@@ -1717,14 +1541,14 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 <section class="section" id="price">
   <div class="container">
     <div class="pricing-wrap">
-      <div class="price-label">Стоимость S&M-пилота</div>
+      <div class="price-label">Стоимость проекта</div>
       <div class="price-main">$20,000</div>
       <div class="price-aed">≈ 73 400 AED</div>
       <div class="price-per">За полный пакет работ · 2,5 месяца</div>
       <div class="price-breakdown">
-        Аудит Sales & Marketing · Ликбез руководства S&M<br>
-        База знаний под пилот · 3 ИИ-агента в вашем контуре<br>
-        Регламент безопасности · План волны 2 (Operations)
+        Аудит трёх отделов · Корпоративное обучение S&M, Construction, Finance<br>
+        База знаний под пилот · 3 ИИ-агента в Sales & Marketing<br>
+        Закрытый контур + VPN · План волны 2 (Construction, Finance)
       </div>
       <a href="#" class="cta-btn">Согласовать и стартовать →</a>
 
